@@ -3,27 +3,27 @@ import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "http://localhost:3000/",
+      url: "https://kurashi-calculator.vercel.app/",
       lastModified: new Date(),
     },
     {
-      url: "http://localhost:3000/take-home",
+      url: "https://kurashi-calculator.vercel.app/take-home",
       lastModified: new Date(),
     },
     {
-      url: "http://localhost:3000/rent",
+      url: "https://kurashi-calculator.vercel.app/rent",
       lastModified: new Date(),
     },
     {
-      url: "http://localhost:3000/living-cost",
+      url: "https://kurashi-calculator.vercel.app/living-cost",
       lastModified: new Date(),
     },
     {
-      url: "http://localhost:3000/simulation",
+      url: "https://kurashi-calculator.vercel.app/simulation",
       lastModified: new Date(),
     },
     {
-      url: "http://localhost:3000/take-home-25",
+      url: "https://kurashi-calculator.vercel.app/take-home-25",
       lastModified: new Date(),
     },
   ];
