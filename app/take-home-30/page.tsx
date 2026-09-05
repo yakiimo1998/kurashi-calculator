@@ -174,6 +174,38 @@ export default function TakeHome30Page() {
             住む地域、家賃、生活スタイル、交通費などによって異なります。
           </p>
         </article>
+                <section className="mt-8 rounded-2xl bg-blue-50 p-6">
+          <h2 className="text-xl font-bold text-gray-900">
+            自分の条件でも計算してみる
+          </h2>
+
+          <p className="mt-3 text-sm leading-6 text-gray-600">
+            手取りや生活費は人によって異なります。自分の条件を入力して、家賃や毎月の貯金額を確認してみましょう。
+          </p>
+
+          <div className="mt-5 flex flex-col gap-3">
+            <a
+              href="/take-home"
+              className="rounded-xl bg-blue-600 px-5 py-3 text-center font-semibold text-white hover:bg-blue-700"
+            >
+              手取り額を計算する
+            </a>
+
+            <a
+              href="/rent"
+              className="rounded-xl border border-gray-300 bg-white px-5 py-3 text-center font-semibold text-gray-700 hover:bg-gray-50"
+            >
+              適正家賃を計算する
+            </a>
+
+            <a
+              href="/simulation"
+              className="rounded-xl border border-gray-300 bg-white px-5 py-3 text-center font-semibold text-gray-700 hover:bg-gray-50"
+            >
+              一人暮らしをシミュレーションする
+            </a>
+          </div>
+        </section>
       </div>
     </main>
   );
