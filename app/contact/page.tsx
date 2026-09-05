@@ -32,15 +32,77 @@ export default function ContactPage() {
             </p>
           </section>
 
-          <section className="mt-8">
+                    <section className="mt-8">
             <h2 className="text-2xl font-bold text-gray-900">
-              お問い合わせ方法
+              お問い合わせフォーム
             </h2>
 
-            <p className="mt-4 leading-7 text-gray-700">
-              現在、お問い合わせフォームを準備中です。
-              お問い合わせ方法については、準備が整い次第ご案内します。
-            </p>
+            <form
+  action="https://formspree.io/f/xdeodrqp"
+  method="POST"
+  className="mt-6 space-y-6"
+>
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-semibold text-gray-900"
+                >
+                  お名前
+                </label>
+
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  required
+                  className="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-blue-500"
+                  placeholder="お名前を入力してください"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-semibold text-gray-900"
+                >
+                  メールアドレス
+                </label>
+
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  className="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-blue-500"
+                  placeholder="example@example.com"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-semibold text-gray-900"
+                >
+                  お問い合わせ内容
+                </label>
+
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows={6}
+                  className="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-blue-500"
+                  placeholder="お問い合わせ内容を入力してください"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full rounded-xl bg-blue-600 px-5 py-4 font-semibold text-white hover:bg-blue-700"
+              >
+                送信する
+              </button>
+            </form>
           </section>
 
           <section className="mt-8">
