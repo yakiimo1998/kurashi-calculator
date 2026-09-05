@@ -155,6 +155,24 @@ export default function Electricity() {
               </Link>
             </div>
           </section>
+          
+
+                    <section className="mt-8 rounded-2xl bg-gray-50 p-6">
+            <h2 className="text-xl font-bold text-gray-900">
+              電気代についてもっと詳しく
+            </h2>
+
+            <p className="mt-3 text-sm leading-6 text-gray-600">
+              一人暮らしの電気代の目安や、電気代を節約するポイントについて詳しく解説しています。
+            </p>
+
+            <a
+              href="/electricity-guide"
+              className="mt-5 block rounded-xl bg-blue-600 px-5 py-3 text-center font-semibold text-white hover:bg-blue-700"
+            >
+              一人暮らしの電気代を詳しく見る
+            </a>
+          </section>
 
           <p className="mt-8 text-sm leading-6 text-gray-500">
             ※この計算結果は目安です。実際の電気料金は、契約プラン、
