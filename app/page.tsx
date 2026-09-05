@@ -187,7 +187,41 @@ export default function Home() {
             </Link>
           </div>
         </section>
+        <section className="mt-12">
+          <h2 className="text-2xl font-bold text-gray-900">
+            暮らしのお役立ち記事
+          </h2>
 
+          <p className="mt-3 text-gray-600">
+            一人暮らしのお金や生活費について、わかりやすく解説しています。
+          </p>
+
+          <div className="mt-5 grid gap-4 sm:grid-cols-2">
+            <Link
+              href="/living-cost-guide"
+              className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
+            >
+              <p className="font-bold text-gray-900">
+                一人暮らしの生活費はいくら？
+              </p>
+              <p className="mt-2 text-sm text-gray-600">
+                家賃・食費・光熱費など、毎月の生活費の目安を解説
+              </p>
+            </Link>
+
+            <Link
+              href="/saving-guide"
+              className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
+            >
+              <p className="font-bold text-gray-900">
+                一人暮らしの貯金額はいくら？
+              </p>
+              <p className="mt-2 text-sm text-gray-600">
+                毎月いくら貯金すればいい？貯金額の目安を解説
+              </p>
+            </Link>
+          </div>
+        </section>
         <footer className="mt-16 text-center text-sm text-gray-500">
           <div>暮らしの計算機</div>
 
