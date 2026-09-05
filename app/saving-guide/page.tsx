@@ -223,6 +223,31 @@ export default function SavingGuidePage() {
             </p>
           </section>
         </article>
+                <section className="mt-8 rounded-2xl bg-blue-50 p-6">
+          <h2 className="text-xl font-bold text-gray-900">
+            自分の貯金額をシミュレーションする
+          </h2>
+
+          <p className="mt-3 text-sm leading-6 text-gray-600">
+            毎月の手取りと生活費を入力して、毎月いくら残せるのか計算してみましょう。
+          </p>
+
+          <div className="mt-5 flex flex-col gap-3">
+            <a
+              href="/simulation"
+              className="rounded-xl bg-blue-600 px-5 py-3 text-center font-semibold text-white hover:bg-blue-700"
+            >
+              一人暮らしをシミュレーションする
+            </a>
+
+            <a
+              href="/living-cost"
+              className="rounded-xl border border-gray-300 bg-white px-5 py-3 text-center font-semibold text-gray-700 hover:bg-gray-50"
+            >
+              一人暮らしの生活費を計算する
+            </a>
+          </div>
+        </section>
       </div>
     </main>
   );
