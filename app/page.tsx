@@ -116,7 +116,36 @@ export default function Home() {
             </Link>
           </div>
         </section>
+        <section className="mt-10">
+          <h2 className="text-2xl font-bold text-gray-900">
+            便利な生活費計算
+          </h2>
 
+          <p className="mt-3 text-gray-600">
+            電気代など、毎日の暮らしにかかる費用もかんたんに計算できます。
+          </p>
+
+          <div className="mt-5">
+            <Link
+              href="/electricity"
+              className="block rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200 hover:bg-gray-50"
+            >
+              <div className="text-4xl">💡</div>
+
+              <h3 className="mt-4 text-xl font-bold text-gray-900">
+                電気代計算機
+              </h3>
+
+              <p className="mt-2 text-sm leading-6 text-gray-600">
+                消費電力と使用時間から、1か月・1年間の電気代を計算します。
+              </p>
+
+              <p className="mt-4 font-semibold text-blue-600">
+                電気代を計算する →
+              </p>
+            </Link>
+          </div>
+        </section>
         <section className="mt-10">
           <h2 className="text-2xl font-bold text-gray-900">
             手取り別の一人暮らし
