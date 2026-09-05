@@ -23,56 +23,64 @@ export default function LivingCostGuidePage() {
           </p>
 
           <section className="mt-8">
-            <h2 className="text-2xl font-bold text-gray-900">
-              一人暮らしの生活費の目安
-            </h2>
+                       <h3 className="mt-8 text-xl font-bold text-gray-900">
+              地域別の一人暮らし生活費の目安
+            </h3>
 
             <p className="mt-4 leading-7 text-gray-700">
-              一人暮らしの生活費は、住んでいる地域や生活スタイルによって
-              大きく変わります。
+              一人暮らしにかかる生活費は、住む地域によっても変わります。
+              特に家賃は地域差が大きいため、東京23区、大阪市、名古屋市では
+              必要な生活費にも違いが出ます。
             </p>
 
-            <div className="mt-6 overflow-hidden rounded-xl border border-gray-200">
-              <table className="w-full text-left">
+            <div className="mt-6 overflow-x-auto rounded-xl border border-gray-200">
+              <table className="w-full min-w-[640px] text-left">
                 <thead className="bg-gray-100">
                   <tr>
-                    <th className="px-4 py-3">項目</th>
-                    <th className="px-4 py-3">月額の目安</th>
+                    <th className="px-4 py-3">地域</th>
+                    <th className="px-4 py-3">家賃</th>
+                    <th className="px-4 py-3">食費</th>
+                    <th className="px-4 py-3">水道光熱費</th>
+                    <th className="px-4 py-3">通信費</th>
+                    <th className="px-4 py-3">その他</th>
+                    <th className="px-4 py-3">月額目安</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="border-t">
-                    <td className="px-4 py-3">家賃</td>
-                    <td className="px-4 py-3">5〜8万円</td>
-                  </tr>
-                  <tr className="border-t">
-                    <td className="px-4 py-3">食費</td>
-                    <td className="px-4 py-3">2〜5万円</td>
-                  </tr>
-                  <tr className="border-t">
-                    <td className="px-4 py-3">水道光熱費</td>
-                    <td className="px-4 py-3">1〜2万円</td>
-                  </tr>
-                  <tr className="border-t">
-                    <td className="px-4 py-3">通信費</td>
-                    <td className="px-4 py-3">0.5〜1.5万円</td>
-                  </tr>
-                  <tr className="border-t">
-                    <td className="px-4 py-3">日用品</td>
+                    <td className="px-4 py-3">東京23区</td>
+                    <td className="px-4 py-3">7〜9万円</td>
+                    <td className="px-4 py-3">3〜4万円</td>
+                    <td className="px-4 py-3">1〜1.5万円</td>
                     <td className="px-4 py-3">0.5〜1万円</td>
+                    <td className="px-4 py-3">2〜3万円</td>
+                    <td className="px-4 py-3 font-semibold">13.5〜18.5万円</td>
                   </tr>
                   <tr className="border-t">
-                    <td className="px-4 py-3">交通費</td>
-                    <td className="px-4 py-3">0.5〜1.5万円</td>
+                    <td className="px-4 py-3">大阪市</td>
+                    <td className="px-4 py-3">5.5〜7万円</td>
+                    <td className="px-4 py-3">3〜4万円</td>
+                    <td className="px-4 py-3">1〜1.5万円</td>
+                    <td className="px-4 py-3">0.5〜1万円</td>
+                    <td className="px-4 py-3">2〜3万円</td>
+                    <td className="px-4 py-3 font-semibold">12〜17万円</td>
+                  </tr>
+                  <tr className="border-t">
+                    <td className="px-4 py-3">名古屋市</td>
+                    <td className="px-4 py-3">5〜6.5万円</td>
+                    <td className="px-4 py-3">3〜4万円</td>
+                    <td className="px-4 py-3">1〜1.5万円</td>
+                    <td className="px-4 py-3">0.5〜1万円</td>
+                    <td className="px-4 py-3">2〜3万円</td>
+                    <td className="px-4 py-3 font-semibold">11.5〜16.5万円</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <p className="mt-4 leading-7 text-gray-700">
-              例えば、家賃7万円、食費3万円、水道光熱費1.5万円、
-              通信費1万円、日用品1万円、交通費1万円とすると、
-              毎月の基本的な生活費は約14.5万円になります。
+            <p className="mt-4 text-sm leading-6 text-gray-600">
+              ※金額は一人暮らしを想定したおおよその目安です。住むエリア、
+              部屋の広さ、生活スタイルなどによって実際の費用は異なります。
             </p>
 
             <p className="mt-4 leading-7 text-gray-700">
@@ -188,31 +196,7 @@ export default function LivingCostGuidePage() {
             </p>
           </section>
         </article>
-                <section className="mt-8 rounded-2xl bg-blue-50 p-6">
-          <h2 className="text-xl font-bold text-gray-900">
-            実際の生活費を計算してみる
-          </h2>
 
-          <p className="mt-3 text-sm leading-6 text-gray-600">
-            自分の家賃や食費などを入力して、一人暮らしに毎月いくら必要なのか計算してみましょう。
-          </p>
-
-          <div className="mt-5 flex flex-col gap-3">
-            <a
-              href="/living-cost"
-              className="rounded-xl bg-blue-600 px-5 py-3 text-center font-semibold text-white hover:bg-blue-700"
-            >
-              一人暮らし費用を計算する
-            </a>
-
-            <a
-              href="/simulation"
-              className="rounded-xl border border-gray-300 bg-white px-5 py-3 text-center font-semibold text-gray-700 hover:bg-gray-50"
-            >
-              一人暮らしをシミュレーションする
-            </a>
-          </div>
-        </section>
       </div>
     </main>
   );
