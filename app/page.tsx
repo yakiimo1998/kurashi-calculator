@@ -97,24 +97,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200">
-            <div className="mb-4 text-4xl">💴</div>
-
-            <h2 className="text-xl font-bold text-gray-900">
-              手取り25万円の一人暮らし
-            </h2>
-
-            <p className="mt-2 text-sm leading-6 text-gray-600">
-              手取り25万円なら家賃はいくら？生活費や貯金額の目安を紹介します。
-            </p>
-
-            <Link
-              href="/take-home-25"
-              className="mt-6 block w-full rounded-xl bg-blue-600 px-4 py-3 text-center font-semibold text-white hover:bg-blue-700"
-            >
-              詳しく見る
-            </Link>
-          </div>
+          
         </section>
         <section className="mt-10">
           <h2 className="text-2xl font-bold text-gray-900">
@@ -146,75 +129,75 @@ export default function Home() {
             </Link>
           </div>
         </section>
-        <section className="mt-10">
-          <h2 className="text-2xl font-bold text-gray-900">
-            手取り別の一人暮らし
-          </h2>
+       <section className="mt-10">
+  <h2 className="text-2xl font-bold text-gray-900">
+    手取り別の一人暮らし
+  </h2>
 
-          <p className="mt-3 text-gray-600">
-            手取り額ごとの家賃・生活費・貯金額の目安を確認できます。
-          </p>
+  <p className="mt-3 text-gray-600">
+    手取り額ごとの家賃・生活費・貯金額の目安を確認できます。
+  </p>
 
-          <div className="mt-5 grid gap-4 sm:grid-cols-2">
-            <Link
-              href="/take-home-20"
-              className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
-            >
-              <p className="font-bold text-gray-900">手取り20万円</p>
-              <p className="mt-2 text-sm text-gray-600">
-                家賃・生活費・貯金額の目安
-              </p>
-            </Link>
+  <div className="mt-5 grid gap-4 sm:grid-cols-2">
+    <Link
+      href="/take-home-20"
+      className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
+    >
+      <p className="font-bold text-gray-900">手取り20万円</p>
+      <p className="mt-2 text-sm text-gray-600">
+        家賃・生活費・貯金額の目安
+      </p>
+    </Link>
 
-            <Link
-              href="/take-home-25"
-              className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
-            >
-              <p className="font-bold text-gray-900">手取り25万円</p>
-              <p className="mt-2 text-sm text-gray-600">
-                家賃・生活費・貯金額の目安
-              </p>
-            </Link>
+    <Link
+      href="/take-home-25"
+      className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
+    >
+      <p className="font-bold text-gray-900">手取り25万円</p>
+      <p className="mt-2 text-sm text-gray-600">
+        家賃・生活費・貯金額の目安
+      </p>
+    </Link>
 
-            <Link
-              href="/take-home-30"
-              className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
-            >
-              <p className="font-bold text-gray-900">手取り30万円</p>
-              <p className="mt-2 text-sm text-gray-600">
-                家賃・生活費・貯金額の目安
-              </p>
-            </Link>
+    <Link
+      href="/take-home-30"
+      className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
+    >
+      <p className="font-bold text-gray-900">手取り30万円</p>
+      <p className="mt-2 text-sm text-gray-600">
+        家賃・生活費・貯金額の目安
+      </p>
+    </Link>
 
-            <Link
-              href="/take-home-35"
-              className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
-            >
-              <p className="font-bold text-gray-900">手取り35万円</p>
-              <p className="mt-2 text-sm text-gray-600">
-                家賃・生活費・貯金額の目安
-              </p>
-            </Link>
+    <Link
+      href="/take-home-35"
+      className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
+    >
+      <p className="font-bold text-gray-900">手取り35万円</p>
+      <p className="mt-2 text-sm text-gray-600">
+        家賃・生活費・貯金額の目安
+      </p>
+    </Link>
 
-            <Link
-              href="/take-home-40"
-              className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
-            >
-              <p className="font-bold text-gray-900">手取り40万円</p>
-              <p className="mt-2 text-sm text-gray-600">
-                家賃・生活費・貯金額の目安
-              </p>
-            </Link>
-          </div>
+    <Link
+      href="/take-home-40"
+      className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
+    >
+      <p className="font-bold text-gray-900">手取り40万円</p>
+      <p className="mt-2 text-sm text-gray-600">
+        家賃・生活費・貯金額の目安
+      </p>
+    </Link>
+  </div>
 
-          <div className="mt-8 text-center">
-            <Link
-              href="/simulation"
-              className="inline-block rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700"
-            >
-              自分の条件で一人暮らしを計算する
-            </Link>
-          </div>
+  <div className="mt-8 text-center">
+    <Link
+      href="/simulation"
+      className="inline-block rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700"
+    >
+      自分の条件で一人暮らしを計算する
+    </Link>
+  </div>
         </section>
         <section className="mt-12">
           <h2 className="text-2xl font-bold text-gray-900">
@@ -226,30 +209,54 @@ export default function Home() {
           </p>
 
           <div className="mt-5 grid gap-4 sm:grid-cols-2">
-            <Link
-              href="/living-cost-guide"
-              className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
-            >
-              <p className="font-bold text-gray-900">
-                一人暮らしの生活費はいくら？
-              </p>
-              <p className="mt-2 text-sm text-gray-600">
-                家賃・食費・光熱費など、毎月の生活費の目安を解説
-              </p>
-            </Link>
+  <Link
+    href="/living-cost-guide"
+    className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
+  >
+    <p className="font-bold text-gray-900">
+      一人暮らしの生活費はいくら？
+    </p>
+    <p className="mt-2 text-sm text-gray-600">
+      家賃・食費・光熱費など、毎月の生活費の目安を解説
+    </p>
+  </Link>
 
-            <Link
-              href="/saving-guide"
-              className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
-            >
-              <p className="font-bold text-gray-900">
-                一人暮らしの貯金額はいくら？
-              </p>
-              <p className="mt-2 text-sm text-gray-600">
-                毎月いくら貯金すればいい？貯金額の目安を解説
-              </p>
-            </Link>
-          </div>
+  <Link
+    href="/saving-guide"
+    className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
+  >
+    <p className="font-bold text-gray-900">
+      一人暮らしの貯金額はいくら？
+    </p>
+    <p className="mt-2 text-sm text-gray-600">
+      毎月いくら貯金すればいい？貯金額の目安を解説
+    </p>
+  </Link>
+
+  <Link
+    href="/moving-cost"
+    className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
+  >
+    <p className="font-bold text-gray-900">
+      引っ越し費用はいくら？
+    </p>
+    <p className="mt-2 text-sm text-gray-600">
+      一人暮らしの引っ越し費用の相場と節約方法を解説
+    </p>
+  </Link>
+
+  <Link
+    href="/electricity-guide"
+    className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
+  >
+    <p className="font-bold text-gray-900">
+      電気代はいくら？
+    </p>
+    <p className="mt-2 text-sm text-gray-600">
+      一人暮らしの電気代の目安と計算方法を解説
+    </p>
+  </Link>
+</div>
         </section>
         <footer className="mt-16 text-center text-sm text-gray-500">
           <div>暮らしの計算機</div>
