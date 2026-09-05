@@ -90,6 +90,38 @@ export default function RentPage() {
             </div>
           )}
         </div>
+                <section className="mt-8 rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200">
+          <h2 className="text-xl font-bold text-gray-900">
+            一人暮らしのお金もチェック
+          </h2>
+
+          <p className="mt-3 text-sm leading-6 text-gray-600">
+            家賃の目安がわかったら、生活費や貯金額も確認してみましょう。
+          </p>
+
+          <div className="mt-5 flex flex-col gap-3">
+            <a
+              href="/living-cost"
+              className="rounded-xl bg-blue-600 px-5 py-3 text-center font-semibold text-white hover:bg-blue-700"
+            >
+              一人暮らしの生活費を計算する
+            </a>
+
+            <a
+              href="/simulation"
+              className="rounded-xl border border-gray-300 bg-white px-5 py-3 text-center font-semibold text-gray-700 hover:bg-gray-50"
+            >
+              一人暮らしをシミュレーションする
+            </a>
+
+            <a
+              href="/take-home"
+              className="rounded-xl border border-gray-300 bg-white px-5 py-3 text-center font-semibold text-gray-700 hover:bg-gray-50"
+            >
+              手取り額を計算する
+            </a>
+          </div>
+        </section>
       </div>
     </main>
   );
