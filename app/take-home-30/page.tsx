@@ -129,27 +129,35 @@ export default function TakeHome30Page() {
           </section>
 
           <section className="mt-10">
-            <h2 className="text-2xl font-bold text-gray-900">
-              毎月いくら残る？
-            </h2>
+  <h2 className="text-2xl font-bold text-gray-900">
+    毎月いくら貯金できる？
+  </h2>
 
-            <p className="mt-4 leading-7 text-gray-700">
-              上記の例では、生活費の合計は約17.5万円です。
-              手取り30万円から差し引くと、毎月約12.5万円が残ります。
-            </p>
+  <p className="mt-4 leading-7 text-gray-700">
+    上記の生活費を例にすると、手取り30万円から生活費17.5万円を引いた場合、
+    毎月12.5万円が残ります。
+  </p>
 
-            <div className="mt-6 rounded-2xl bg-green-50 p-6">
-              <p className="font-semibold text-gray-900">
-                毎月残るお金の目安
-              </p>
-              <p className="mt-2 text-2xl font-bold text-green-600">
-                約12.5万円
-              </p>
-              <p className="mt-2 text-gray-700">
-                年間では約150万円が残る計算です。
-              </p>
-            </div>
-          </section>
+  <div className="mt-5 grid gap-4 sm:grid-cols-2">
+    <div className="rounded-2xl bg-green-50 p-6 text-center">
+      <p className="text-sm text-gray-700">
+        毎月残るお金
+      </p>
+      <p className="mt-2 text-3xl font-bold text-green-600">
+        12.5万円
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-green-50 p-6 text-center">
+      <p className="text-sm text-gray-700">
+        年間で残るお金
+      </p>
+      <p className="mt-2 text-3xl font-bold text-green-600">
+        150万円
+      </p>
+    </div>
+  </div>
+</section>
 
           <section className="mt-10">
             <h2 className="text-2xl font-bold text-gray-900">
