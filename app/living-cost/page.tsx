@@ -96,6 +96,38 @@ export default function LivingCostPage() {
             </div>
           )}
         </div>
+                <section className="mt-8 rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200">
+          <h2 className="text-xl font-bold text-gray-900">
+            生活費をもっと詳しくチェック
+          </h2>
+
+          <p className="mt-3 text-sm leading-6 text-gray-600">
+            毎月の生活費がわかったら、電気代や貯金できる金額も確認してみましょう。
+          </p>
+
+          <div className="mt-5 flex flex-col gap-3">
+            <a
+              href="/electricity"
+              className="rounded-xl bg-blue-600 px-5 py-3 text-center font-semibold text-white hover:bg-blue-700"
+            >
+              電気代を計算する
+            </a>
+
+            <a
+              href="/simulation"
+              className="rounded-xl border border-gray-300 bg-white px-5 py-3 text-center font-semibold text-gray-700 hover:bg-gray-50"
+            >
+              一人暮らしをシミュレーションする
+            </a>
+
+            <a
+              href="/saving-guide"
+              className="rounded-xl border border-gray-300 bg-white px-5 py-3 text-center font-semibold text-gray-700 hover:bg-gray-50"
+            >
+              一人暮らしの貯金額を読む
+            </a>
+          </div>
+        </section>
       </div>
     </main>
   );
