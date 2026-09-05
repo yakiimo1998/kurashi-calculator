@@ -117,6 +117,69 @@ export default function Home() {
           </div>
         </section>
 
+<section className="mt-10">
+  <h2 className="text-2xl font-bold text-gray-900">
+    手取り別の一人暮らし
+  </h2>
+
+  <p className="mt-3 text-gray-600">
+    手取り額ごとの家賃・生活費・貯金額の目安を確認できます。
+  </p>
+
+  <div className="mt-5 grid gap-4 sm:grid-cols-2">
+    <Link
+      href="/take-home-20"
+      className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
+    >
+      <p className="font-bold text-gray-900">手取り20万円</p>
+      <p className="mt-2 text-sm text-gray-600">
+        家賃・生活費・貯金額の目安
+      </p>
+    </Link>
+
+    <Link
+      href="/take-home-25"
+      className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
+    >
+      <p className="font-bold text-gray-900">手取り25万円</p>
+      <p className="mt-2 text-sm text-gray-600">
+        家賃・生活費・貯金額の目安
+      </p>
+    </Link>
+
+    <Link
+      href="/take-home-30"
+      className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
+    >
+      <p className="font-bold text-gray-900">手取り30万円</p>
+      <p className="mt-2 text-sm text-gray-600">
+        家賃・生活費・貯金額の目安
+      </p>
+    </Link>
+
+    <Link
+      href="/take-home-35"
+      className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
+    >
+      <p className="font-bold text-gray-900">手取り35万円</p>
+      <p className="mt-2 text-sm text-gray-600">
+        家賃・生活費・貯金額の目安
+      </p>
+    </Link>
+    
+    <Link
+  href="/take-home-40"
+  className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
+>
+  <p className="font-bold text-gray-900">手取り40万円</p>
+  <p className="mt-2 text-sm text-gray-600">
+    家賃・生活費・貯金額の目安
+  </p>
+</Link>
+
+  </div>
+</section>
+
         <footer className="mt-16 text-center text-sm text-gray-500">
           暮らしの計算機
         </footer>
