@@ -203,6 +203,38 @@ export default function SimulationPage() {
         <p className="mt-6 text-xs leading-6 text-gray-500">
           ※このシミュレーションは目安です。実際の生活費や貯蓄額は、地域・住居・ライフスタイルなどによって異なります。
         </p>
+                <section className="mt-8 rounded-2xl bg-white p-6 shadow-sm">
+          <h2 className="text-xl font-bold text-gray-900">
+            一人暮らしのお金をもっとチェック
+          </h2>
+
+          <p className="mt-3 text-sm leading-6 text-gray-600">
+            シミュレーション結果をもとに、家賃や生活費も確認してみましょう。
+          </p>
+
+          <div className="mt-5 flex flex-col gap-3">
+            <a
+              href="/rent"
+              className="rounded-xl bg-blue-600 px-5 py-3 text-center font-semibold text-white hover:bg-blue-700"
+            >
+              適正家賃を計算する
+            </a>
+
+            <a
+              href="/living-cost"
+              className="rounded-xl border border-gray-300 bg-white px-5 py-3 text-center font-semibold text-gray-700 hover:bg-gray-50"
+            >
+              一人暮らしの生活費を計算する
+            </a>
+
+            <a
+              href="/take-home"
+              className="rounded-xl border border-gray-300 bg-white px-5 py-3 text-center font-semibold text-gray-700 hover:bg-gray-50"
+            >
+              手取り額を計算する
+            </a>
+          </div>
+        </section>
       </div>
     </main>
   );
