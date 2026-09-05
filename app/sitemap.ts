@@ -42,5 +42,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: "https://kurashi-calculator.vercel.app/take-home-40",
       lastModified: new Date(),
     },
+    {
+  url: "https://kurashi-calculator.vercel.app/privacy",
+  lastModified: new Date(),
+},
+{
+  url: "https://kurashi-calculator.vercel.app/contact",
+  lastModified: new Date(),
+},
   ];
 }
