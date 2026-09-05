@@ -166,7 +166,7 @@ export default function Home() {
         家賃・生活費・貯金額の目安
       </p>
     </Link>
-    
+
     <Link
   href="/take-home-40"
   className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
@@ -178,6 +178,15 @@ export default function Home() {
 </Link>
 
   </div>
+
+      <div className="mt-8 text-center">
+      <Link
+        href="/simulation"
+        className="inline-block rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700"
+      >
+        自分の条件で一人暮らしを計算する
+      </Link>
+    </div>
 </section>
 
         <footer className="mt-16 text-center text-sm text-gray-500">
