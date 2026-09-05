@@ -1,0 +1,180 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "手取り30万円の一人暮らし｜家賃・生活費・貯金額の目安",
+  description:
+    "手取り30万円で一人暮らしをする場合の家賃・生活費・毎月残るお金・年間貯金額の目安を紹介します。",
+};
+
+export default function TakeHome30Page() {
+  return (
+    <main className="min-h-screen bg-gray-50 px-4 py-10">
+      <div className="mx-auto max-w-3xl">
+        <Link
+          href="/"
+          className="mb-6 inline-block text-sm text-blue-600 hover:underline"
+        >
+          ← トップに戻る
+        </Link>
+
+        <article className="rounded-2xl bg-white p-6 shadow-sm md:p-10">
+          <h1 className="text-3xl font-bold leading-tight text-gray-900">
+            手取り30万円の一人暮らし｜家賃・生活費・貯金額の目安
+          </h1>
+
+          <p className="mt-5 leading-7 text-gray-700">
+            手取り30万円で一人暮らしをする場合、家賃はいくらまでにするとよいのでしょうか。
+            ここでは、家賃・食費・水道光熱費・通信費などの生活費と、毎月どれくらいのお金を残せるかの目安を紹介します。
+          </p>
+
+          <section className="mt-8">
+            <h2 className="text-2xl font-bold text-gray-900">
+              手取り30万円なら家賃はいくら？
+            </h2>
+
+            <p className="mt-4 leading-7 text-gray-700">
+              一般的な目安として、家賃は手取り収入の25〜30%程度にすると、
+              生活費とのバランスを取りやすいとされています。
+            </p>
+
+            <div className="mt-6 rounded-2xl bg-blue-50 p-6">
+              <p className="font-semibold text-gray-900">
+                手取り30万円の場合
+              </p>
+              <p className="mt-2 text-2xl font-bold text-blue-600">
+                家賃 約7.5〜9万円
+              </p>
+            </div>
+
+            <p className="mt-4 text-sm leading-6 text-gray-600">
+              ※実際に適正な家賃は、住んでいる地域、通勤費、車の有無、
+              趣味や貯金額などによって変わります。
+            </p>
+          </section>
+
+          <section className="mt-10">
+            <h2 className="text-2xl font-bold text-gray-900">
+              手取り30万円の一人暮らしの生活費例
+            </h2>
+
+            <div className="mt-5 overflow-hidden rounded-2xl border border-gray-300">
+              <table className="w-full border-collapse">
+                <thead className="bg-gray-100">
+                  <tr>
+                    <th className="border-b border-gray-300 px-4 py-4 text-left">
+                      項目
+                    </th>
+                    <th className="border-b border-gray-300 px-4 py-4 text-right">
+                      月額
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border-b border-gray-300 px-4 py-4">
+                      家賃
+                    </td>
+                    <td className="border-b border-gray-300 px-4 py-4 text-right">
+                      8万円
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border-b border-gray-300 px-4 py-4">
+                      食費
+                    </td>
+                    <td className="border-b border-gray-300 px-4 py-4 text-right">
+                      3万円
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border-b border-gray-300 px-4 py-4">
+                      水道光熱費
+                    </td>
+                    <td className="border-b border-gray-300 px-4 py-4 text-right">
+                      1.5万円
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border-b border-gray-300 px-4 py-4">
+                      通信費
+                    </td>
+                    <td className="border-b border-gray-300 px-4 py-4 text-right">
+                      1万円
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border-b border-gray-300 px-4 py-4">
+                      日用品
+                    </td>
+                    <td className="border-b border-gray-300 px-4 py-4 text-right">
+                      1万円
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="border-b border-gray-300 px-4 py-4">
+                      交通費
+                    </td>
+                    <td className="border-b border-gray-300 px-4 py-4 text-right">
+                      1万円
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="px-4 py-4">その他</td>
+                    <td className="px-4 py-4 text-right">2万円</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section className="mt-10">
+            <h2 className="text-2xl font-bold text-gray-900">
+              毎月いくら残る？
+            </h2>
+
+            <p className="mt-4 leading-7 text-gray-700">
+              上記の例では、生活費の合計は約17.5万円です。
+              手取り30万円から差し引くと、毎月約12.5万円が残ります。
+            </p>
+
+            <div className="mt-6 rounded-2xl bg-green-50 p-6">
+              <p className="font-semibold text-gray-900">
+                毎月残るお金の目安
+              </p>
+              <p className="mt-2 text-2xl font-bold text-green-600">
+                約12.5万円
+              </p>
+              <p className="mt-2 text-gray-700">
+                年間では約150万円が残る計算です。
+              </p>
+            </div>
+          </section>
+
+          <section className="mt-10">
+            <h2 className="text-2xl font-bold text-gray-900">
+              自分の条件で計算してみる
+            </h2>
+
+            <p className="mt-4 leading-7 text-gray-700">
+              家賃や食費などは人によって大きく異なります。
+              自分の収入や生活費を入力して、毎月いくら残るのか計算してみましょう。
+            </p>
+
+            <Link
+              href="/simulation"
+              className="mt-6 block rounded-xl bg-blue-600 px-4 py-3 text-center font-semibold text-white hover:bg-blue-700"
+            >
+              一人暮らしシミュレーターで計算する
+            </Link>
+          </section>
+
+          <p className="mt-10 text-sm leading-6 text-gray-500">
+            ※このページの金額は一般的な目安です。実際の生活費や貯金額は、
+            住む地域、家賃、生活スタイル、交通費などによって異なります。
+          </p>
+        </article>
+      </div>
+    </main>
+  );
+}
