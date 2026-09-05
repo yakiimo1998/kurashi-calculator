@@ -54,5 +54,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   url: "https://kurashi-calculator.vercel.app/terms",
   lastModified: new Date(),
 },
+{
+  url: "https://kurashi-calculator.vercel.app/living-cost-guide",
+  lastModified: new Date(),
+},
   ];
 }
