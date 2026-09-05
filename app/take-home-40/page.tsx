@@ -133,25 +133,35 @@ export default function TakeHome40Page() {
           </section>
 
           <section className="mt-10">
-            <h2 className="text-2xl font-bold text-gray-900">
-              手取り40万円なら毎月いくら残る？
-            </h2>
+  <h2 className="text-2xl font-bold text-gray-900">
+    毎月いくら貯金できる？
+  </h2>
 
-            <p className="mt-4 leading-7 text-gray-700">
-              上記の生活費例では、毎月の生活費は約21.5万円です。
-              手取り40万円から差し引くと、毎月約18.5万円が残る計算になります。
-            </p>
+  <p className="mt-4 leading-7 text-gray-700">
+    上記の生活費を例にすると、手取り40万円から生活費21.5万円を引いた場合、
+    毎月18.5万円が残ります。
+  </p>
 
-            <div className="mt-6 rounded-2xl bg-green-50 p-6">
-              <p className="font-bold text-gray-900">毎月残るお金の目安</p>
-              <p className="mt-2 text-3xl font-bold text-green-600">
-                約18.5万円
-              </p>
-              <p className="mt-2 text-sm text-gray-600">
-                年間では約222万円を貯金に回せる計算です。
-              </p>
-            </div>
-          </section>
+  <div className="mt-5 grid gap-4 sm:grid-cols-2">
+    <div className="rounded-2xl bg-green-50 p-6 text-center">
+      <p className="text-sm text-gray-700">
+        毎月残るお金
+      </p>
+      <p className="mt-2 text-3xl font-bold text-green-600">
+        18.5万円
+      </p>
+    </div>
+
+    <div className="rounded-2xl bg-green-50 p-6 text-center">
+      <p className="text-sm text-gray-700">
+        年間で残るお金
+      </p>
+      <p className="mt-2 text-3xl font-bold text-green-600">
+        222万円
+      </p>
+    </div>
+  </div>
+</section>
 
           <section className="mt-10">
             <h2 className="text-2xl font-bold text-gray-900">
@@ -171,9 +181,10 @@ export default function TakeHome40Page() {
             </Link>
           </section>
 
-          <p className="mt-10 text-sm leading-6 text-gray-500">
-            ※このページの金額は一例・目安です。実際の生活費や貯金額は、地域、住居、ライフスタイルなどによって異なります。
+          <p className="mt-8 text-xs leading-6 text-gray-500">
+            ※掲載している金額はあくまで目安です。実際の生活費や貯金額は、地域・住居・ライフスタイルなどによって異なります。
           </p>
+
         </article>
 
         <footer className="mt-10 text-center text-sm text-gray-500">
