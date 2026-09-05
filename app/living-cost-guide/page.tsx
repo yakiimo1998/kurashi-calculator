@@ -188,6 +188,31 @@ export default function LivingCostGuidePage() {
             </p>
           </section>
         </article>
+                <section className="mt-8 rounded-2xl bg-blue-50 p-6">
+          <h2 className="text-xl font-bold text-gray-900">
+            実際の生活費を計算してみる
+          </h2>
+
+          <p className="mt-3 text-sm leading-6 text-gray-600">
+            自分の家賃や食費などを入力して、一人暮らしに毎月いくら必要なのか計算してみましょう。
+          </p>
+
+          <div className="mt-5 flex flex-col gap-3">
+            <a
+              href="/living-cost"
+              className="rounded-xl bg-blue-600 px-5 py-3 text-center font-semibold text-white hover:bg-blue-700"
+            >
+              一人暮らし費用を計算する
+            </a>
+
+            <a
+              href="/simulation"
+              className="rounded-xl border border-gray-300 bg-white px-5 py-3 text-center font-semibold text-gray-700 hover:bg-gray-50"
+            >
+              一人暮らしをシミュレーションする
+            </a>
+          </div>
+        </section>
       </div>
     </main>
   );
