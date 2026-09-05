@@ -132,30 +132,39 @@ export default function TakeHome35Page() {
           </section>
 
           <section className="mt-10">
-            <h2 className="text-2xl font-bold text-gray-900">
-              毎月いくら残る？
-            </h2>
+  <h2 className="text-2xl font-bold text-gray-900">
+    毎月いくら貯金できる？
+  </h2>
 
-            <p className="mt-4 leading-7 text-gray-700">
-              上記の生活費を合計すると、毎月の生活費は約20万円です。
-            </p>
+  <p className="mt-4 leading-7 text-gray-700">
+    上記の生活費を例にすると、手取り35万円から生活費20万円を引いた場合、
+    毎月15万円が残ります。
+  </p>
 
-            <div className="mt-5 rounded-2xl bg-blue-50 p-6">
-              <p className="font-semibold text-gray-900">
-                手取り35万円の場合
-              </p>
-              <p className="mt-2 text-2xl font-bold text-blue-600">
-                毎月 約15万円残る
-              </p>
-              <p className="mt-2 text-lg font-semibold text-gray-900">
-                年間では約180万円
-              </p>
-            </div>
+  <div className="mt-5 grid gap-4 sm:grid-cols-2">
+    <div className="rounded-2xl bg-green-50 p-6 text-center">
+      <p className="text-sm text-gray-700">
+        毎月残るお金
+      </p>
+      <p className="mt-2 text-3xl font-bold text-green-600">
+        15万円
+      </p>
+    </div>
 
-            <p className="mt-4 text-sm leading-6 text-gray-600">
-              ※上記はあくまで一例です。実際の支出や貯金額は生活スタイルによって変わります。
-            </p>
-          </section>
+    <div className="rounded-2xl bg-green-50 p-6 text-center">
+      <p className="text-sm text-gray-700">
+        年間で残るお金
+      </p>
+      <p className="mt-2 text-3xl font-bold text-green-600">
+        180万円
+      </p>
+    </div>
+  </div>
+
+  <p className="mt-4 text-sm leading-6 text-gray-600">
+    ※上記はあくまで一例です。実際の支出や貯金額は生活スタイルによって変わります。
+  </p>
+</section>
 
           <section className="mt-10">
             <h2 className="text-2xl font-bold text-gray-900">
@@ -168,7 +177,7 @@ export default function TakeHome35Page() {
 
             <Link
               href="/simulation"
-              className="mt-5 inline-block rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700"
+              className="mt-5 block w-full rounded-xl bg-blue-600 px-6 py-3 text-center font-semibold text-white hover:bg-blue-700"
             >
               一人暮らしシミュレーターを使う
             </Link>
