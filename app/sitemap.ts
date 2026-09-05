@@ -50,5 +50,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   url: "https://kurashi-calculator.vercel.app/contact",
   lastModified: new Date(),
 },
+{
+  url: "https://kurashi-calculator.vercel.app/terms",
+  lastModified: new Date(),
+},
   ];
 }

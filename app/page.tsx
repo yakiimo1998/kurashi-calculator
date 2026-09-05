@@ -205,6 +205,12 @@ export default function Home() {
             >
               お問い合わせ
             </Link>
+            <Link
+  href="/terms"
+  className="text-blue-600 hover:underline"
+>
+  利用規約・免責事項
+</Link>
           </div>
         </footer>
       </div>
