@@ -129,6 +129,41 @@ export default function Home() {
             </Link>
           </div>
         </section>
+
+
+
+        <section className="mt-10">
+          <h2 className="text-2xl font-bold text-gray-900">
+            車の費用計算
+          </h2>
+
+          <p className="mt-3 text-gray-600">
+            車の購入費、ローン、ガソリン代、保険、税金などを含めた車の費用を計算できます。
+          </p>
+
+          <div className="mt-5">
+            <Link
+              href="/car-cost"
+              className="block rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200 hover:bg-gray-50"
+            >
+              <div className="text-4xl">🚗</div>
+
+              <h3 className="mt-4 text-xl font-bold text-gray-900">
+  車の費用計算機
+</h3>
+
+              <p className="mt-2 text-sm leading-6 text-gray-600">
+                車の購入価格やローン、ガソリン代、駐車場代などから、毎月・年間の車関連費用を計算します。
+              </p>
+
+              <p className="mt-4 font-semibold text-blue-600">
+                車の費用を計算する →
+              </p>
+            </Link>
+          </div>
+        </section>
+
+
        <section className="mt-10">
   <h2 className="text-2xl font-bold text-gray-900">
     手取り別の一人暮らし
