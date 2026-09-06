@@ -49,12 +49,12 @@ export default function LivingCostGuidePage() {
                 <tbody>
                   <tr className="border-t">
                     <td className="px-4 py-3">東京23区</td>
-                    <td className="px-4 py-3">7〜9万円</td>
+                    <td className="px-4 py-3">9〜11万円</td>
                     <td className="px-4 py-3">3〜4万円</td>
                     <td className="px-4 py-3">1〜1.5万円</td>
                     <td className="px-4 py-3">0.5〜1万円</td>
                     <td className="px-4 py-3">2〜3万円</td>
-                    <td className="px-4 py-3 font-semibold">13.5〜18.5万円</td>
+                    <td className="px-4 py-3 font-semibold">15.5〜20.5万円</td>
                   </tr>
                   <tr className="border-t">
                     <td className="px-4 py-3">大阪市</td>
@@ -131,6 +131,37 @@ export default function LivingCostGuidePage() {
               ただし、無理に食費を削りすぎると生活の満足度が下がることもあります。
               自炊と外食を組み合わせながら、自分に合った予算を決めることが大切です。
             </p>
+          </section>
+                    <section className="mt-8">
+            <h2 className="text-2xl font-bold text-gray-900">
+              一人暮らしの家電をレンタルする方法
+            </h2>
+
+            <p className="mt-4 leading-7 text-gray-700">
+              一人暮らしを始めると、冷蔵庫や洗濯機などの家電をそろえるために
+              初期費用がかかります。購入するだけでなく、家電をレンタルする方法もあります。
+              初期費用を抑えたい場合は、選択肢のひとつとして検討してみてもよいでしょう。
+            </p>
+
+            <div className="mt-6 flex justify-center">
+              <a
+                href="https://px.a8.net/svt/ejp?a8mat=4BC4QP+2DR76+5MMG+5ZEMP"
+                rel="nofollow"
+              >
+                <img
+                  src="https://www27.a8.net/svt/bgt?aid=260906497004&wid=001&eno=01&mid=s00000026260001005000&mc=1"
+                  width="300"
+                  height="250"
+                  alt="家電レンタルみんなのHappy"
+                />
+              </a>
+              <img
+                src="https://www14.a8.net/0.gif?a8mat=4BC4QP+2DR76+5MMG+5ZEMP"
+                width="1"
+                height="1"
+                alt=""
+              />
+            </div>
           </section>
 
           <section className="mt-8">

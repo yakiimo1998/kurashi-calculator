@@ -54,14 +54,13 @@ export default function PrivacyPage() {
             </p>
           </section>
 
-          <section className="mt-8">
+                    <section className="mt-8">
             <h2 className="text-2xl font-bold text-gray-900">
               3. 広告について
             </h2>
 
             <p className="mt-4 leading-7 text-gray-700">
-              当サイトでは、今後Google AdSenseなどの第三者配信による広告サービスを
-              利用する場合があります。
+              当サイトでは、サービスの紹介にアフィリエイト広告を利用しています。
             </p>
 
             <p className="mt-4 leading-7 text-gray-700">
