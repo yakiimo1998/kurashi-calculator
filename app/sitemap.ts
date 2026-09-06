@@ -74,5 +74,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   url: "https://kurashi-calculator.vercel.app/electricity-guide",
   lastModified: new Date(),
 },
+{
+  url: "https://kurashi-calculator.vercel.app/car-cost",
+  lastModified: new Date(),
+},
   ];
 }
