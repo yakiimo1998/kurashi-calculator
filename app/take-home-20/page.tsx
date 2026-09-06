@@ -135,6 +135,36 @@ export default function TakeHome20Page() {
   </div>
 </section>
 
+<section className="mt-10">
+  <h2 className="text-2xl font-bold text-gray-900">
+    車を持つなら？
+  </h2>
+
+  <p className="mt-4 leading-7 text-gray-700">
+    車を持つ場合は、ローンやガソリン代、駐車場代、保険、税金、
+    車検・整備費などの費用も考えておく必要があります。
+  </p>
+
+  <div className="mt-5">
+    <Link
+      href="/car-cost"
+      className="block rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200 hover:bg-gray-50"
+    >
+      <h3 className="text-xl font-bold text-gray-900">
+        車の維持費を計算する
+      </h3>
+
+      <p className="mt-2 text-sm leading-6 text-gray-600">
+        手取り額や車の購入価格などから、毎月・年間の車関連費用を計算できます。
+      </p>
+
+      <p className="mt-4 font-semibold text-blue-600">
+        車の費用を計算する →
+      </p>
+    </Link>
+  </div>
+</section>
+
           <section className="mt-10">
             <h2 className="text-2xl font-bold text-gray-900">
               自分の条件で計算してみる
