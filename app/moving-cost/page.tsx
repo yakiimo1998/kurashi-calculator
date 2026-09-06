@@ -159,6 +159,37 @@ export default function MovingCost() {
         </section>
           </div>
         </section>
+                <section className="mt-10">
+          <h2 className="text-2xl font-bold text-gray-900">
+            引っ越し後のインターネットも検討
+          </h2>
+
+          <p className="mt-4 leading-7 text-gray-600">
+            新居でインターネットを利用する場合は、引っ越し前に
+            回線サービスを比較しておくとスムーズです。
+          </p>
+
+          <div className="mt-6 flex justify-center">
+            <a
+              href="https://px.a8.net/svt/ejp?a8mat=4BC4QP+5CX82+447K+BXIYP"
+              rel="nofollow"
+            >
+              <img
+                src="https://www29.a8.net/svt/bgt?aid=260906497009&wid=001&eno=01&mid=s00000019208002004000&mc=1"
+                width="468"
+                height="60"
+                alt="@nifty光"
+                className="h-auto max-w-full"
+              />
+            </a>
+            <img
+              src="https://www15.a8.net/0.gif?a8mat=4BC4QP+5CX82+447K+BXIYP"
+              width="1"
+              height="1"
+              alt=""
+            />
+          </div>
+        </section>
 
         <section className="mt-10">
           <h2 className="text-2xl font-bold text-gray-900">
