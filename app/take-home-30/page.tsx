@@ -159,6 +159,36 @@ export default function TakeHome30Page() {
   </div>
 </section>
 
+<section className="mt-10">
+  <h2 className="text-2xl font-bold text-gray-900">
+    車を持つなら？
+  </h2>
+
+  <p className="mt-4 leading-7 text-gray-700">
+    車を持つ場合は、ローンやガソリン代、駐車場代、保険、税金、
+    車検・整備費などの費用も考えておく必要があります。
+  </p>
+
+  <div className="mt-5">
+    <Link
+      href="/car-cost"
+      className="block rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200 hover:bg-gray-50"
+    >
+      <h3 className="text-xl font-bold text-gray-900">
+        車の維持費を計算する
+      </h3>
+
+      <p className="mt-2 text-sm leading-6 text-gray-600">
+        手取り額や車の購入価格などから、毎月・年間の車関連費用を計算できます。
+      </p>
+
+      <p className="mt-4 font-semibold text-blue-600">
+        車の費用を計算する →
+      </p>
+    </Link>
+  </div>
+</section>
+
           <section className="mt-10">
             <h2 className="text-2xl font-bold text-gray-900">
               自分の条件で計算してみる
@@ -177,9 +207,8 @@ export default function TakeHome30Page() {
             </Link>
           </section>
 
-          <p className="mt-10 text-sm leading-6 text-gray-500">
-            ※このページの金額は一般的な目安です。実際の生活費や貯金額は、
-            住む地域、家賃、生活スタイル、交通費などによって異なります。
+         <p className="mt-8 text-xs leading-6 text-gray-500">
+            ※掲載している金額はあくまで目安です。実際の生活費や貯金額は、地域・住居・ライフスタイルなどによって異なります。
           </p>
         </article>
                 <section className="mt-8 rounded-2xl bg-blue-50 p-6">
