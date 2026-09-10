@@ -32,78 +32,37 @@ export default function ContactPage() {
             </p>
           </section>
 
-                    <section className="mt-8">
+          <section className="mt-8">
             <h2 className="text-2xl font-bold text-gray-900">
-              お問い合わせフォーム
+              Xでお問い合わせ
             </h2>
 
-            <form
-  action="https://formspree.io/f/xdeodrqp"
-  method="POST"
-  className="mt-6 space-y-6"
->
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-semibold text-gray-900"
-                >
-                  お名前
-                </label>
+            <p className="mt-4 leading-7 text-gray-700">
+              お問い合わせは、X（旧Twitter）の「暮らしの計算機」アカウントへ
+              ご連絡ください。
+            </p>
 
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  required
-                  className="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-blue-500"
-                  placeholder="お名前を入力してください"
-                />
-              </div>
+            <div className="mt-6 rounded-xl bg-gray-50 p-6 ring-1 ring-gray-200">
+              <p className="text-lg font-bold text-gray-900">
+                暮らしの計算機
+              </p>
+              <p className="mt-1 text-gray-600">@kura_culator</p>
 
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-semibold text-gray-900"
-                >
-                  メールアドレス
-                </label>
-
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  required
-                  className="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-blue-500"
-                  placeholder="example@example.com"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-semibold text-gray-900"
-                >
-                  お問い合わせ内容
-                </label>
-
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows={6}
-                  className="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3 outline-none focus:border-blue-500"
-                  placeholder="お問い合わせ内容を入力してください"
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full rounded-xl bg-blue-600 px-5 py-4 font-semibold text-white hover:bg-blue-700"
+              <a
+                href="https://x.com/kura_culator"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-flex w-full items-center justify-center rounded-xl bg-blue-600 px-5 py-4 text-center font-semibold text-white hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
               >
-                送信する
-              </button>
-            </form>
+                Xのプロフィールを開く
+                <span className="sr-only">（新しいタブで開きます）</span>
+              </a>
+              <p className="mt-3 text-sm text-gray-500">
+                Xのプロフィールが新しいタブで開きます。
+              </p>
+            </div>
           </section>
+          
 
           <section className="mt-8">
             <h2 className="text-2xl font-bold text-gray-900">
