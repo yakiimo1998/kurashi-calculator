@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/electricity-guide" },
   title: "電気代はいくら？一人暮らしの目安と計算方法を解説｜暮らしの計算機",
   description:
     "一人暮らしの電気代はいくら？電気代の計算方法、家電ごとの消費電力、電気代を節約する方法をわかりやすく解説します。",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function ElectricityGuide() {
   return (
-    <main className="min-h-screen bg-gray-50 px-6 py-12">
+    <main id="main-content" className="min-h-screen bg-gray-50 px-6 py-12">
       <article className="mx-auto max-w-3xl rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200 md:p-10">
         <Link
           href="/"
@@ -58,7 +59,7 @@ export default function ElectricityGuide() {
           </div>
 
           <p className="mt-4 text-sm leading-6 text-gray-500">
-            ※実際の電気料金は契約プランや料金単価などによって異なります。
+            ※31円/kWhはこの計算例の仮定です。基本料金、燃料費調整額、再エネ賦課金などは自動で含まれません。実際の単価は契約先の明細をご確認ください。
           </p>
         </section>
 
@@ -110,7 +111,7 @@ export default function ElectricityGuide() {
           </div>
 
           <p className="mt-4 text-sm leading-6 text-gray-500">
-            ※消費電力は製品によって異なります。正確な数値は家電本体や取扱説明書などをご確認ください。
+            ※表は製品選びに使う仕様値ではありません。消費電力は家電本体や取扱説明書で確認してください。電子レンジの出力と消費電力は異なります。エアコン等は運転状況で電力が変動します。
           </p>
         </section>
 

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "手取り計算機｜年収から手取り額をかんたん計算",
+  alternates: { canonical: "/take-home" },
+  title: "手取りの簡易試算｜年収と仮の手取り率で計算",
   description:
-    "年収を入力するだけで、手取り年収と月あたりの手取り額の目安をかんたんに計算できます。",
+    "年収に指定した手取り率を掛ける簡易試算です。税金・社会保険料は個別計算しません。",
 };
 
 export default function TakeHomeLayout({

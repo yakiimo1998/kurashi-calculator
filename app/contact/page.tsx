@@ -1,8 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
+export const metadata: Metadata = { title: "お問い合わせ｜暮らしの計算機", description: "暮らしの計算機へのご質問・不具合報告はXの @kura_culator へ。", alternates: { canonical: "/contact" } };
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-gray-50 px-4 py-10">
+    <main id="main-content" className="min-h-screen bg-gray-50 px-4 py-10">
       <div className="mx-auto max-w-3xl">
         <Link
           href="/"
@@ -76,9 +78,7 @@ export default function ContactPage() {
           </section>
         </article>
 
-        <footer className="mt-10 text-center text-sm text-gray-500">
-          暮らしの計算機
-        </footer>
+        
       </div>
     </main>
   );

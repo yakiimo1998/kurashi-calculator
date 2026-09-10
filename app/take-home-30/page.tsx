@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/take-home-30" },
   title: "手取り30万円の一人暮らし｜家賃・生活費・貯金額の目安",
   description:
     "手取り30万円で一人暮らしをする場合の家賃・生活費・毎月残るお金・年間貯金額の目安を紹介します。",
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function TakeHome30Page() {
   return (
-    <main className="min-h-screen bg-gray-50 px-4 py-10">
+    <main id="main-content" className="min-h-screen bg-gray-50 px-4 py-10">
       <div className="mx-auto max-w-3xl">
         <Link
           href="/"
@@ -22,6 +23,7 @@ export default function TakeHome30Page() {
           <h1 className="text-3xl font-bold leading-tight text-gray-900">
             手取り30万円の一人暮らし｜家賃・生活費・貯金額の目安
           </h1>
+<aside className="article-note">この記事の金額は、当サイトが設定した家計の計算例です。統計上の平均・推奨額ではありません。年間の残額は同じ条件が12か月続く仮定で、入力例に含まれない臨時支出や賞与は反映していません。</aside>
 
           <p className="mt-5 leading-7 text-gray-700">
             手取り30万円で一人暮らしをする場合、家賃はいくらまでにするとよいのでしょうか。
@@ -34,8 +36,7 @@ export default function TakeHome30Page() {
             </h2>
 
             <p className="mt-4 leading-7 text-gray-700">
-              一般的な目安として、家賃は手取り収入の25〜30%程度にすると、
-              生活費とのバランスを取りやすいとされています。
+              ここでは手取り収入の25〜30％を家賃に充てる仮定で比較します。生活費や希望する貯金額によって、確保できる家賃は変わります。
             </p>
 
             <div className="mt-6 rounded-2xl bg-blue-50 p-6">
@@ -48,7 +49,7 @@ export default function TakeHome30Page() {
             </div>
 
             <p className="mt-4 text-sm leading-6 text-gray-600">
-              ※実際に適正な家賃は、住んでいる地域、通勤費、車の有無、
+              ※実際に確保できる家賃は、住んでいる地域、通勤費、車の有無、
               趣味や貯金額などによって変わります。
             </p>
           </section>
@@ -207,7 +208,7 @@ export default function TakeHome30Page() {
             </Link>
           </section>
 
-         <p className="mt-8 text-xs leading-6 text-gray-500">
+         <p className="mt-8 text-sm leading-6 text-gray-500">
             ※掲載している金額はあくまで目安です。実際の生活費や貯金額は、地域・住居・ライフスタイルなどによって異なります。
           </p>
         </article>

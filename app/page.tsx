@@ -1,324 +1,35 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import BudgetCalculator from "./components/BudgetCalculator";
 
+export const metadata: Metadata = { alternates: { canonical: "/" } };
+
+const tools = [
+  { n: "01", href: "/simulation", title: "一人暮らしの収支", text: "家賃・食費などを分けて、毎月残るお金を確認。", tag: "家計全体" },
+  { n: "02", href: "/rent", title: "家賃の予算", text: "手取りに占める割合を変えて、家賃を比較。", tag: "部屋探し" },
+  { n: "03", href: "/living-cost", title: "生活費の合計", text: "7つの費目から、毎月と年間の支出を計算。", tag: "支出の整理" },
+  { n: "04", href: "/take-home", title: "手取りの簡易試算", text: "年収と仮の手取り率から計算。税額計算は含みません。", tag: "収入の目安" },
+  { n: "05", href: "/electricity", title: "家電の電気代", text: "消費電力と使用時間から、家電ごとの費用を計算。", tag: "光熱費" },
+  { n: "06", href: "/car-cost", title: "車の費用", text: "ローン・燃料・保険などを月額にまとめて確認。", tag: "車のある暮らし" },
+];
+const guides = [
+  ["/living-cost-guide", "生活費", "一人暮らしの予算の立て方", "固定費と変動費を分けて、見落としを減らす。"],
+  ["/saving-guide", "貯金", "毎月いくら残せるかを考える", "残ったお金と、貯金に回すお金を分ける。"],
+  ["/moving-cost", "引っ越し", "入居前に用意するお金", "引っ越し代だけでなく、契約時の費用も確認。"],
+  ["/electricity-guide", "電気代", "家電の電気代を見積もる", "消費電力・使う時間・単価の調べ方。"],
+];
 export default function Home() {
-  return (
-    <main className="min-h-screen bg-gray-50 px-6 py-12">
-      <div className="mx-auto max-w-4xl">
-        <header className="mb-12 text-center">
-          <p className="mb-3 text-sm font-semibold text-blue-600">
-            暮らしのお金をかんたん計算
-          </p>
-
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900">
-            🏠 暮らしの計算機
-          </h1>
-
-          <p className="mt-4 text-gray-600">
-            「いくら必要？」「どれくらいが適正？」
-            <br />
-            暮らしに関するお金をかんたんに計算できます。
-          </p>
-        </header>
-
-        <section className="grid gap-6 md:grid-cols-2">
-          <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200">
-            <div className="mb-4 text-4xl">💰</div>
-
-            <h2 className="text-xl font-bold text-gray-900">
-              手取り計算
-            </h2>
-
-            <p className="mt-2 text-sm leading-6 text-gray-600">
-              月給や年収から、実際の手取り額の目安を計算します。
-            </p>
-
-            <Link
-              href="/take-home"
-              className="mt-6 block w-full rounded-xl bg-blue-600 px-4 py-3 text-center font-semibold text-white hover:bg-blue-700"
-            >
-              計算する
-            </Link>
-          </div>
-
-          <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200">
-            <div className="mb-4 text-4xl">🏠</div>
-
-            <h2 className="text-xl font-bold text-gray-900">
-              適正家賃計算
-            </h2>
-
-            <p className="mt-2 text-sm leading-6 text-gray-600">
-              手取り収入から、無理のない家賃の目安を計算します。
-            </p>
-
-            <Link
-              href="/rent"
-              className="mt-6 block w-full rounded-xl bg-blue-600 px-4 py-3 text-center font-semibold text-white hover:bg-blue-700"
-            >
-              計算する
-            </Link>
-          </div>
-
-          <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200">
-            <div className="mb-4 text-4xl">🛋️</div>
-
-            <h2 className="text-xl font-bold text-gray-900">
-              一人暮らし費用
-            </h2>
-
-            <p className="mt-2 text-sm leading-6 text-gray-600">
-              一人暮らしに必要な毎月の生活費を計算します。
-            </p>
-
-            <Link
-              href="/living-cost"
-              className="mt-6 block w-full rounded-xl bg-blue-600 px-4 py-3 text-center font-semibold text-white hover:bg-blue-700"
-            >
-              計算する
-            </Link>
-          </div>
-
-          <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200">
-            <div className="mb-4 text-4xl">📊</div>
-
-            <h2 className="text-xl font-bold text-gray-900">
-              一人暮らしシミュレーター
-            </h2>
-
-            <p className="mt-2 text-sm leading-6 text-gray-600">
-              手取りと生活費から、毎月いくら残るかをシミュレーションします。
-            </p>
-
-            <Link
-              href="/simulation"
-              className="mt-6 block w-full rounded-xl bg-blue-600 px-4 py-3 text-center font-semibold text-white hover:bg-blue-700"
-            >
-              シミュレーションする
-            </Link>
-          </div>
-
-          
-        </section>
-        <section className="mt-10">
-          <h2 className="text-2xl font-bold text-gray-900">
-            便利な生活費計算
-          </h2>
-
-          <p className="mt-3 text-gray-600">
-            電気代など、毎日の暮らしにかかる費用もかんたんに計算できます。
-          </p>
-
-          <div className="mt-5">
-            <Link
-              href="/electricity"
-              className="block rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200 hover:bg-gray-50"
-            >
-              <div className="text-4xl">💡</div>
-
-              <h3 className="mt-4 text-xl font-bold text-gray-900">
-                電気代計算機
-              </h3>
-
-              <p className="mt-2 text-sm leading-6 text-gray-600">
-                消費電力と使用時間から、1か月・1年間の電気代を計算します。
-              </p>
-
-              <p className="mt-4 font-semibold text-blue-600">
-                電気代を計算する →
-              </p>
-            </Link>
-          </div>
-        </section>
-
-
-
-        <section className="mt-10">
-          <h2 className="text-2xl font-bold text-gray-900">
-            車の費用計算
-          </h2>
-
-          <p className="mt-3 text-gray-600">
-            車の購入費、ローン、ガソリン代、保険、税金などを含めた車の費用を計算できます。
-          </p>
-
-          <div className="mt-5">
-            <Link
-              href="/car-cost"
-              className="block rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200 hover:bg-gray-50"
-            >
-              <div className="text-4xl">🚗</div>
-
-              <h3 className="mt-4 text-xl font-bold text-gray-900">
-  車の費用計算機
-</h3>
-
-              <p className="mt-2 text-sm leading-6 text-gray-600">
-                車の購入価格やローン、ガソリン代、駐車場代などから、毎月・年間の車関連費用を計算します。
-              </p>
-
-              <p className="mt-4 font-semibold text-blue-600">
-                車の費用を計算する →
-              </p>
-            </Link>
-          </div>
-        </section>
-
-
-       <section className="mt-10">
-  <h2 className="text-2xl font-bold text-gray-900">
-    手取り別の一人暮らし
-  </h2>
-
-  <p className="mt-3 text-gray-600">
-    手取り額ごとの家賃・生活費・貯金額の目安を確認できます。
-  </p>
-
-  <div className="mt-5 grid gap-4 sm:grid-cols-2">
-    <Link
-      href="/take-home-20"
-      className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
-    >
-      <p className="font-bold text-gray-900">手取り20万円</p>
-      <p className="mt-2 text-sm text-gray-600">
-        家賃・生活費・貯金額の目安
-      </p>
-    </Link>
-
-    <Link
-      href="/take-home-25"
-      className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
-    >
-      <p className="font-bold text-gray-900">手取り25万円</p>
-      <p className="mt-2 text-sm text-gray-600">
-        家賃・生活費・貯金額の目安
-      </p>
-    </Link>
-
-    <Link
-      href="/take-home-30"
-      className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
-    >
-      <p className="font-bold text-gray-900">手取り30万円</p>
-      <p className="mt-2 text-sm text-gray-600">
-        家賃・生活費・貯金額の目安
-      </p>
-    </Link>
-
-    <Link
-      href="/take-home-35"
-      className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
-    >
-      <p className="font-bold text-gray-900">手取り35万円</p>
-      <p className="mt-2 text-sm text-gray-600">
-        家賃・生活費・貯金額の目安
-      </p>
-    </Link>
-
-    <Link
-      href="/take-home-40"
-      className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
-    >
-      <p className="font-bold text-gray-900">手取り40万円</p>
-      <p className="mt-2 text-sm text-gray-600">
-        家賃・生活費・貯金額の目安
-      </p>
-    </Link>
-  </div>
-
-  <div className="mt-8 text-center">
-    <Link
-      href="/simulation"
-      className="inline-block rounded-xl bg-blue-600 px-6 py-3 font-semibold text-white hover:bg-blue-700"
-    >
-      自分の条件で一人暮らしを計算する
-    </Link>
-  </div>
-        </section>
-        <section className="mt-12">
-          <h2 className="text-2xl font-bold text-gray-900">
-            暮らしのお役立ち記事
-          </h2>
-
-          <p className="mt-3 text-gray-600">
-            一人暮らしのお金や生活費について、わかりやすく解説しています。
-          </p>
-
-          <div className="mt-5 grid gap-4 sm:grid-cols-2">
-  <Link
-    href="/living-cost-guide"
-    className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
-  >
-    <p className="font-bold text-gray-900">
-      一人暮らしの生活費はいくら？
-    </p>
-    <p className="mt-2 text-sm text-gray-600">
-      家賃・食費・光熱費など、毎月の生活費の目安を解説
-    </p>
-  </Link>
-
-  <Link
-    href="/saving-guide"
-    className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
-  >
-    <p className="font-bold text-gray-900">
-      一人暮らしの貯金額はいくら？
-    </p>
-    <p className="mt-2 text-sm text-gray-600">
-      毎月いくら貯金すればいい？貯金額の目安を解説
-    </p>
-  </Link>
-
-  <Link
-    href="/moving-cost"
-    className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
-  >
-    <p className="font-bold text-gray-900">
-      引っ越し費用はいくら？
-    </p>
-    <p className="mt-2 text-sm text-gray-600">
-      一人暮らしの引っ越し費用の相場と節約方法を解説
-    </p>
-  </Link>
-
-  <Link
-    href="/electricity-guide"
-    className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:bg-gray-50"
-  >
-    <p className="font-bold text-gray-900">
-      電気代はいくら？
-    </p>
-    <p className="mt-2 text-sm text-gray-600">
-      一人暮らしの電気代の目安と計算方法を解説
-    </p>
-  </Link>
-</div>
-        </section>
-        <footer className="mt-16 text-center text-sm text-gray-500">
-          <div>暮らしの計算機</div>
-
-          <div className="mt-2 flex justify-center gap-4">
-            <Link
-              href="/privacy"
-              className="text-blue-600 hover:underline"
-            >
-              プライバシーポリシー
-            </Link>
-
-            <Link
-              href="/contact"
-              className="text-blue-600 hover:underline"
-            >
-              お問い合わせ
-            </Link>
-            <Link
-  href="/terms"
-  className="text-blue-600 hover:underline"
->
-  利用規約・免責事項
-</Link>
-          </div>
-        </footer>
-      </div>
-    </main>
-  );
+  return <main id="main-content" className="home-page">
+    <section className="home-intro"><div><p className="section-kicker">一人暮らしのお金を、見える形に。</p>
+      <h1>この暮らし、<br className="mobile-break" />毎月いくら残る？</h1>
+      <p>手取りと生活費を入れて、あなたの予算を確かめましょう。</p></div><span className="free-label">無料・登録不要</span></section>
+    <BudgetCalculator compact />
+    <p className="under-calculator">計算結果は入力条件に基づく試算です。金額を変更すると、その場で更新されます。</p>
+    <section id="tools" className="home-section"><div className="section-heading"><div><p className="section-kicker">CALCULATORS</p><h2>知りたいお金から選ぶ</h2></div><span>6つの無料計算機</span></div>
+      <div className="tool-grid">{tools.map(tool => <Link key={tool.href} href={tool.href} className="tool-card"><div className="tool-card-top"><span className="tool-index">{tool.n}</span><span className="tool-tag">{tool.tag}</span></div><h3>{tool.title}</h3><p>{tool.text}</p><span className="tool-action">計算機を開く <span aria-hidden="true">↗</span></span></Link>)}</div>
+    </section>
+    <section className="income-section"><div><p className="section-kicker">BUDGET EXAMPLES</p><h2>手取り別に、暮らしを考える</h2><p>統計上の平均ではなく、費目を組み合わせた家計の計算例です。</p></div><div className="income-links">{[20,25,30,35,40].map(income => <Link key={income} href={"/take-home-" + income}><span>手取り</span><strong>{income}<small>万円</small></strong><span aria-hidden="true">→</span></Link>)}</div></section>
+    <section className="home-section"><div className="section-heading"><div><p className="section-kicker">GUIDES</p><h2>予算づくりの読みもの</h2></div></div><div className="guide-grid">{guides.map(([href, tag, title, text]) => <Link href={href} key={href} className="guide-card"><span className="guide-tag">{tag}</span><h3>{title}</h3><p>{text}</p><span className="tool-action">読む →</span></Link>)}</div></section>
+    <section className="trust-section"><h2>計算の前提を、わかりやすく。</h2><p>税金を厳密に計算するツールや、貯金額を保証するサービスではありません。各ページで計算式・入力例・含まれない費用を説明しています。</p><Link href="/about">運営・編集方針を見る →</Link></section>
+  </main>;
 }

@@ -2,14 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "一人暮らしの貯金額はいくら？毎月いくら貯めるべきか解説｜暮らしの計算機",
+  alternates: { canonical: "/saving-guide" },
+  title: "一人暮らしの貯金額はいくら？毎月の予算と積立の計算例｜暮らしの計算機",
   description:
     "一人暮らしでは毎月いくら貯金すればいい？手取り別の貯金額の目安や、生活費とのバランス、無理なく貯金する方法を解説します。",
 };
 
 export default function SavingGuidePage() {
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main id="main-content" className="min-h-screen bg-gray-50">
       <div className="mx-auto max-w-3xl px-4 py-10">
         <article className="rounded-2xl bg-white p-6 shadow-sm md:p-10">
           <h1 className="text-3xl font-bold text-gray-900">
@@ -25,13 +26,13 @@ export default function SavingGuidePage() {
 
           <section className="mt-8">
             <h2 className="text-2xl font-bold text-gray-900">
-              毎月の貯金は手取りの10〜20％が目安
+              手取りの10％・20％で試算してみる
             </h2>
 
             <p className="mt-4 leading-7 text-gray-700">
               貯金額に決まった正解はありませんが、
               まずは毎月の手取り収入の10〜20％程度を
-              貯金に回す方法があります。
+              貯金に回す仮定で試算できます。以下の割合は比較用の例であり、平均や推奨額ではありません。
             </p>
 
             <div className="mt-6 overflow-hidden rounded-xl border border-gray-200">
@@ -88,7 +89,7 @@ export default function SavingGuidePage() {
 
             <p className="mt-4 leading-7 text-gray-700">
               家賃、食費、水道光熱費、通信費、日用品、交通費などを
-              合計すると、自分に必要な最低限の生活費が見えてきます。
+              合計すると、入力した支出の全体像が見えてきます。医療費・保険・年払いの支出など、漏れている費用がないかも確認してください。
             </p>
 
             <div className="mt-6 text-center">

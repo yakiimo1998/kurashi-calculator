@@ -1,128 +1,21 @@
 "use client";
-
 import { useState } from "react";
-
+import MoneyInput from "../components/MoneyInput";
+import ToolPage from "../components/ToolPage";
+import { amount } from "../lib/calculations";
 export default function RentPage() {
-  const [income, setIncome] = useState("");
-  const [result, setResult] = useState<number | null>(null);
-
-  const calculate = () => {
-    const monthlyIncome = Number(income);
-
-    if (!monthlyIncome || monthlyIncome <= 0) {
-      setResult(null);
-      return;
-    }
-
-    // 手取り月収の25〜30%を家賃の目安とします
-    const recommendedRent = Math.round(monthlyIncome * 0.28 * 10) / 10;
-
-    setResult(recommendedRent);
-  };
-
-  return (
-    <main className="min-h-screen bg-gray-50 px-6 py-12">
-      <div className="mx-auto max-w-2xl">
-        <a
-          href="/"
-          className="text-sm font-semibold text-blue-600 hover:underline"
-        >
-          ← トップページに戻る
-        </a>
-
-        <div className="mt-8 rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-200">
-          <div className="text-4xl">🏠</div>
-
-          <h1 className="mt-4 text-3xl font-bold text-gray-900">
-            適正家賃計算機
-          </h1>
-
-          <p className="mt-3 text-gray-600">
-            月の手取り額から、無理のない家賃の目安を計算します。
-          </p>
-
-          <div className="mt-8">
-            <label
-              htmlFor="income"
-              className="block text-sm font-semibold text-gray-900"
-            >
-              月の手取り
-            </label>
-
-            <div className="mt-2 flex items-center gap-3">
-              <input
-                id="income"
-                type="number"
-                value={income}
-                onChange={(e) => setIncome(e.target.value)}
-                placeholder="30"
-                className="w-full rounded-xl border border-gray-300 px-4 py-3 text-lg outline-none focus:border-blue-500"
-              />
-
-              <span className="whitespace-nowrap text-gray-700">万円</span>
-            </div>
-          </div>
-
-          <button
-            onClick={calculate}
-            className="mt-6 w-full rounded-xl bg-blue-600 px-4 py-4 font-bold text-white hover:bg-blue-700"
-          >
-            適正家賃を計算する
-          </button>
-
-          {result !== null && (
-            <div className="mt-8 rounded-2xl bg-blue-50 p-6 text-center">
-              <p className="text-sm font-semibold text-gray-600">
-                おすすめ家賃の目安
-              </p>
-
-              <p className="mt-2 text-4xl font-bold text-gray-900">
-                約 {result.toFixed(1)}万円
-              </p>
-
-              <p className="mt-3 text-sm text-gray-600">
-                月の手取りの約28%を目安にしています。
-              </p>
-
-              <p className="mt-4 text-xs text-gray-500">
-                ※これは一般的な目安です。地域の家賃相場や生活費、貯金額などによって適正な家賃は変わります。
-              </p>
-            </div>
-          )}
-        </div>
-                <section className="mt-8 rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200">
-          <h2 className="text-xl font-bold text-gray-900">
-            一人暮らしのお金もチェック
-          </h2>
-
-          <p className="mt-3 text-sm leading-6 text-gray-600">
-            家賃の目安がわかったら、生活費や貯金額も確認してみましょう。
-          </p>
-
-          <div className="mt-5 flex flex-col gap-3">
-            <a
-              href="/living-cost"
-              className="rounded-xl bg-blue-600 px-5 py-3 text-center font-semibold text-white hover:bg-blue-700"
-            >
-              一人暮らしの生活費を計算する
-            </a>
-
-            <a
-              href="/simulation"
-              className="rounded-xl border border-gray-300 bg-white px-5 py-3 text-center font-semibold text-gray-700 hover:bg-gray-50"
-            >
-              一人暮らしをシミュレーションする
-            </a>
-
-            <a
-              href="/take-home"
-              className="rounded-xl border border-gray-300 bg-white px-5 py-3 text-center font-semibold text-gray-700 hover:bg-gray-50"
-            >
-              手取り額を計算する
-            </a>
-          </div>
-        </section>
-      </div>
-    </main>
-  );
+  const [income, setIncome] = useState("25");
+  const [ratio, setRatio] = useState("28");
+  const salary = amount(income, 0.0001, 10000);
+  const percentage = amount(ratio, 0, 100);
+  const result = salary !== null && percentage !== null ? salary * percentage / 100 : null;
+  return <ToolPage title="家賃の予算計算機" description="手取りの何％を住居費に充てるかを変えて、予算を比べます。">
+    <div className="budget-workspace"><div className="budget-inputs"><div className="input-grid">
+      <MoneyInput label="毎月の手取り" value={income} onChange={setIncome} min={0.0001} />
+      <MoneyInput label="家賃・管理費に充てる割合" value={ratio} onChange={setRatio} unit="％" max={100} hint="28％は比較用の仮定です。ご自身の予算に合わせて変更してください。" />
+    </div></div><section className="budget-result" aria-live="polite"><p className="result-label">設定した割合での家賃・管理費</p>
+      {result !== null ? <><p className="result-number">{result.toLocaleString("ja-JP", {maximumFractionDigits:2})}<span>万円</span></p><p className="result-equation">手取り {income}万円 × {ratio}％</p><div className="result-divider" /><p className="result-note">家賃だけで生活の余裕は決まりません。食費・返済・貯金の予算も合わせて確認してください。</p></> : <p>入力内容を確認してください。</p>}
+    </section></div>
+    <section className="explanation"><h2>「適正家賃」は人によって変わります</h2><p>この計算は手取りに割合を掛けるだけの予算試算です。審査基準、地域相場、推奨額を示すものではありません。家賃と管理費・共益費を合算して考えましょう。</p><p>手取り25万円なら、25％で6.25万円、28％で7万円、30％で7.5万円です。残るお金から生活費や年払いの費用をまかなえるか、一人暮らしシミュレーターで確認できます。</p></section>
+  </ToolPage>;
 }

@@ -1,185 +1,21 @@
 "use client";
-
 import { useState } from "react";
-import Link from "next/link";
-
-export default function Electricity() {
-  const [power, setPower] = useState(1000);
-  const [hours, setHours] = useState(5);
-  const [days, setDays] = useState(30);
-  const [rate, setRate] = useState(31);
-
-  const monthlyKwh = (power / 1000) * hours * days;
-  const monthlyCost = monthlyKwh * rate;
-  const yearlyCost = monthlyCost * 12;
-
-  return (
-    <main className="min-h-screen bg-gray-50 px-6 py-12">
-      <div className="mx-auto max-w-2xl">
-        <Link
-          href="/"
-          className="text-sm font-semibold text-blue-600 hover:underline"
-        >
-          ← 暮らしの計算機トップへ
-        </Link>
-
-        <div className="mt-6 rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200 md:p-10">
-          <div className="text-4xl">💡</div>
-
-          <h1 className="mt-4 text-3xl font-bold text-gray-900">
-            電気代計算機
-          </h1>
-
-          <p className="mt-4 leading-7 text-gray-600">
-            家電の消費電力・1日の使用時間・使用日数から、
-            1か月の電気代の目安を計算します。
-          </p>
-
-          <div className="mt-8 space-y-6">
-            <div>
-              <label className="block font-semibold text-gray-900">
-                消費電力（W）
-              </label>
-              <input
-                type="number"
-                min="0"
-                value={power}
-                onChange={(e) => setPower(Number(e.target.value))}
-                className="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3"
-              />
-              <p className="mt-1 text-sm text-gray-500">
-                例：1000Wの家電
-              </p>
-            </div>
-
-            <div>
-              <label className="block font-semibold text-gray-900">
-                1日の使用時間（時間）
-              </label>
-              <input
-                type="number"
-                min="0"
-                value={hours}
-                onChange={(e) => setHours(Number(e.target.value))}
-                className="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3"
-              />
-            </div>
-
-            <div>
-              <label className="block font-semibold text-gray-900">
-                1か月の使用日数（日）
-              </label>
-              <input
-                type="number"
-                min="0"
-                value={days}
-                onChange={(e) => setDays(Number(e.target.value))}
-                className="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3"
-              />
-            </div>
-
-            <div>
-              <label className="block font-semibold text-gray-900">
-                電気料金単価（円/kWh）
-              </label>
-              <input
-                type="number"
-                min="0"
-                value={rate}
-                onChange={(e) => setRate(Number(e.target.value))}
-                className="mt-2 w-full rounded-xl border border-gray-300 px-4 py-3"
-              />
-              <p className="mt-1 text-sm text-gray-500">
-                初期値は31円/kWhです。実際の料金単価は契約内容などによって異なります。
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-10 rounded-2xl bg-blue-600 p-6 text-white">
-            <p className="text-sm font-semibold">1か月の電気代の目安</p>
-
-            <p className="mt-2 text-4xl font-bold">
-              {Math.round(monthlyCost).toLocaleString()}円
-            </p>
-
-            <p className="mt-4 text-sm">
-              使用電力量：約{monthlyKwh.toFixed(1)} kWh / 月
-            </p>
-
-            <p className="mt-1 text-sm">
-              年間：約{Math.round(yearlyCost).toLocaleString()}円
-            </p>
-          </div>
-
-          <section className="mt-10">
-            <h2 className="text-xl font-bold text-gray-900">
-              電気代の計算方法
-            </h2>
-
-            <p className="mt-3 leading-7 text-gray-600">
-              電気代は、おおまかに
-              「消費電力（kW）×使用時間×電気料金単価」
-              で計算できます。
-            </p>
-
-            <p className="mt-3 leading-7 text-gray-600">
-              たとえば1,000Wの家電を1日5時間、30日使用し、
-              電気料金単価を31円/kWhとすると、
-              月額の電気代は約4,650円になります。
-            </p>
-          </section>
-
-          <section className="mt-10 rounded-2xl bg-gray-50 p-6">
-            <h2 className="text-xl font-bold text-gray-900">
-              一人暮らしの生活費もチェック
-            </h2>
-
-            <p className="mt-3 leading-7 text-gray-600">
-              電気代だけでなく、家賃・食費・通信費なども含めて
-              毎月の生活費を確認すると、より正確な家計管理ができます。
-            </p>
-
-            <div className="mt-5 flex flex-col gap-3">
-              <Link
-                href="/living-cost"
-                className="rounded-xl bg-blue-600 px-5 py-3 text-center font-semibold text-white hover:bg-blue-700"
-              >
-                一人暮らし費用を計算する
-              </Link>
-
-              <Link
-                href="/simulation"
-                className="rounded-xl border border-gray-300 bg-white px-5 py-3 text-center font-semibold text-gray-700 hover:bg-gray-50"
-              >
-                一人暮らしをシミュレーションする
-              </Link>
-            </div>
-          </section>
-          
-
-                    <section className="mt-8 rounded-2xl bg-gray-50 p-6">
-            <h2 className="text-xl font-bold text-gray-900">
-              電気代についてもっと詳しく
-            </h2>
-
-            <p className="mt-3 text-sm leading-6 text-gray-600">
-              一人暮らしの電気代の目安や、電気代を節約するポイントについて詳しく解説しています。
-            </p>
-
-            <a
-              href="/electricity-guide"
-              className="mt-5 block rounded-xl bg-blue-600 px-5 py-3 text-center font-semibold text-white hover:bg-blue-700"
-            >
-              一人暮らしの電気代を詳しく見る
-            </a>
-          </section>
-
-          <p className="mt-8 text-sm leading-6 text-gray-500">
-            ※この計算結果は目安です。実際の電気料金は、契約プラン、
-            燃料費調整額、再生可能エネルギー発電促進賦課金などによって異なります。
-          </p>
-        </div>
-      </div>
-    </main>
-  );
+import MoneyInput from "../components/MoneyInput";
+import ToolPage from "../components/ToolPage";
+import { amount, electricityCost } from "../lib/calculations";
+const fields = [
+  { label:"消費電力", unit:"W", max:100000, value:"1000" },
+  { label:"1日の使用時間", unit:"時間", max:24, value:"5" },
+  { label:"1か月の使用日数", unit:"日", max:31, value:"30" },
+  { label:"電気料金単価", unit:"円/kWh", max:10000, value:"31" },
+];
+export default function ElectricityPage() {
+  const [inputs, setInputs] = useState(fields.map(field => field.value));
+  const values = inputs.map((value, i) => amount(value, 0, fields[i].max));
+  const result = values.every(value => value !== null) ? electricityCost(...values as [number,number,number,number]) : null;
+  return <ToolPage title="電気代計算機" description="家電の消費電力と使う時間から、電力量料金を試算します。">
+    <div className="budget-workspace"><div className="budget-inputs"><div className="input-grid input-grid-detail">{fields.map((field, i) => <MoneyInput key={field.label} {...field} value={inputs[i]} onChange={value => setInputs(current => current.map((item,j) => j === i ? value : item))} hint={i === 3 ? "31円は計算例です。契約先の単価へ変更してください。" : undefined} />)}</div></div>
+      <section className="budget-result" aria-live="polite"><p className="result-label">この家電の1か月の電気代</p>{result ? <><p className="result-number">{Math.round(result.monthly).toLocaleString()}<span>円</span></p><p className="result-equation">使用電力量 {result.kwh.toLocaleString("ja-JP",{maximumFractionDigits:2})} kWh</p><div className="result-divider" /><div className="result-detail"><span>同じ条件で12か月使用</span><strong>{Math.round(result.annual).toLocaleString()}円</strong></div></> : <p>入力内容を確認してください。</p>}</section></div>
+    <section className="explanation"><h2>計算式と含まれない料金</h2><p>消費電力（W）÷ 1,000 × 1日の使用時間 × 使用日数 × 電気料金単価。1,000W・5時間・30日・31円なら4,650円です。</p><p>基本料金は含みません。燃料費調整額・再エネ賦課金・割引なども自動加算されません。単価に含めた場合は別に足さないようにしてください。</p><p>一定の消費電力で動かす仮定です。エアコンや冷蔵庫など電力が変動する機器は、実測値や製品の消費電力量を参考にしてください。電子レンジの「出力W」と「消費電力W」も異なります。</p><a href="/electricity-guide">電気代の見積もり方を読む →</a></section>
+  </ToolPage>;
 }

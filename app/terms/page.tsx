@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/terms" },
   title: "利用規約・免責事項｜暮らしの計算機",
   description:
     "暮らしの計算機の利用規約・免責事項です。当サイトのサービス利用に関する注意事項を掲載しています。",
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main id="main-content" className="min-h-screen bg-gray-50">
       <div className="mx-auto max-w-3xl px-4 py-10">
         <article className="rounded-2xl bg-white p-6 shadow-sm md:p-10">
           <h1 className="text-3xl font-bold text-gray-900">
@@ -80,9 +81,9 @@ export default function TermsPage() {
             </h2>
 
             <p className="mt-4 leading-7 text-gray-700">
-              当サイトの利用によって生じた損害、損失、トラブルなどについて、
-              当サイト運営者は、故意または重大な過失がある場合を除き、
-              責任を負わないものとします。
+              当サイトの利用に関する運営者の責任は、
+              消費者契約法その他の適用法令に従います。
+              本規約は、法令により認められる利用者の権利を制限するものではありません。
             </p>
           </section>
 
@@ -111,7 +112,7 @@ export default function TermsPage() {
 
             <p className="mt-4 leading-7 text-gray-700">
               当サイトに掲載されている文章、画像、デザインなどの
-              著作物の無断転載・無断使用を禁止します。
+              著作物について、法令で認められる利用を除き、権利者の許諾なく転載・使用することを禁止します。
             </p>
 
             <p className="mt-4 leading-7 text-gray-700">
@@ -136,7 +137,7 @@ export default function TermsPage() {
           </section>
 
           <p className="mt-10 text-right text-sm text-gray-500">
-            制定日：2026年9月5日
+            制定日：2026年9月5日／更新日：2026年9月10日
           </p>
         </article>
       </div>

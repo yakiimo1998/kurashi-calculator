@@ -2,14 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "引っ越し費用はいくら？一人暮らしの料金相場と節約方法｜暮らしの計算機",
+  alternates: { canonical: "/moving-cost" },
+  title: "引っ越し費用はいくら？一人暮らしの初期費用と見積もり項目｜暮らしの計算機",
   description:
-    "一人暮らしの引っ越し費用はいくら？引っ越し料金の目安、初期費用、繁忙期と通常期の違い、費用を抑える方法をわかりやすく解説します。",
+    "一人暮らしの引っ越し費用はいくら？引っ越し料金や賃貸の初期費用の確認項目、見積もりの比較方法をわかりやすく解説します。",
 };
 
 export default function MovingCost() {
   return (
-    <main className="min-h-screen bg-gray-50 px-6 py-12">
+    <main id="main-content" className="min-h-screen bg-gray-50 px-6 py-12">
       <article className="mx-auto max-w-3xl rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200 md:p-10">
         <Link
           href="/"
@@ -21,6 +22,7 @@ export default function MovingCost() {
         <h1 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">
           引っ越し費用はいくら？
         </h1>
+<p className="ad-disclosure"><strong>広告</strong>：この記事にはA8.netのアフィリエイト広告が含まれます。リンク経由の申込み等により、運営者が報酬を受け取る場合があります。</p>
 
         <p className="mt-4 leading-7 text-gray-600">
           一人暮らしの引っ越しには、引っ越し業者への料金だけでなく、
@@ -28,47 +30,12 @@ export default function MovingCost() {
           ここでは、引っ越しにかかる主な費用と節約方法をわかりやすく紹介します。
         </p>
 
-        <section className="mt-10">
-          <h2 className="text-2xl font-bold text-gray-900">
-            一人暮らしの引っ越し費用の目安
-          </h2>
-
-          <div className="mt-5 overflow-hidden rounded-xl border border-gray-200">
-            <table className="w-full text-left text-sm">
-              <thead className="bg-gray-50">
-                <tr>
-                  <th className="px-4 py-3 font-semibold text-gray-900">
-                    費用
-                  </th>
-                  <th className="px-4 py-3 font-semibold text-gray-900">
-                    目安
-                  </th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr className="border-t border-gray-200">
-                  <td className="px-4 py-3">引っ越し料金</td>
-                  <td className="px-4 py-3">2〜8万円程度</td>
-                </tr>
-
-                <tr className="border-t border-gray-200">
-                  <td className="px-4 py-3">賃貸の初期費用</td>
-                  <td className="px-4 py-3">家賃の4〜6か月分程度</td>
-                </tr>
-
-                <tr className="border-t border-gray-200">
-                  <td className="px-4 py-3">家具・家電</td>
-                  <td className="px-4 py-3">5〜15万円程度</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <p className="mt-4 text-sm leading-6 text-gray-500">
-            ※上記は一般的な目安です。荷物量、距離、時期、地域、物件条件などによって大きく変わります。
-          </p>
-        </section>
+        <section className="mt-10"><h2 className="text-2xl font-bold text-gray-900">見積書で確認する3つの費用</h2>
+    <div className="mt-5 overflow-x-auto"><table className="w-full text-left"><thead><tr><th className="p-3">項目</th><th className="p-3">確認する内容</th></tr></thead><tbody>
+    <tr className="border-t"><th className="p-3 font-medium">引っ越し料金</th><td className="p-3">運搬、梱包、家電の設置、不用品処分などの内訳</td></tr>
+    <tr className="border-t"><th className="p-3 font-medium">賃貸の初期費用</th><td className="p-3">敷金・礼金・仲介手数料・前家賃・保証料・保険等</td></tr>
+    <tr className="border-t"><th className="p-3 font-medium">家具・家電</th><td className="p-3">購入代、配送料、設置費。持ち込める物は除外</td></tr>
+    </tbody></table></div><p className="mt-4 leading-7 text-gray-600">必要な項目と金額は契約ごとに異なります。相場の数字をそのまま予算にせず、実際の見積額を合算してください。返還される可能性のある敷金も、入居時に必要な資金には含めます。</p></section>
 
         <section className="mt-10">
           <h2 className="text-2xl font-bold text-gray-900">
@@ -166,14 +133,17 @@ export default function MovingCost() {
 
           <p className="mt-4 leading-7 text-gray-600">
             新居でインターネットを利用する場合は、引っ越し前に
-            回線サービスを比較しておくとスムーズです。
+            回線サービスの提供エリア、工事の要否と日程を確認しましょう。建物の既存回線で足りる場合もあります。料金は割引終了後の月額、工事費の残債、解約条件も含めて比較してください。
           </p>
 
-          <div className="mt-6 flex justify-center">
+          <p className="ad-disclosure">広告（PR）・提供条件はリンク先でご確認ください。</p>
+<div className="mt-6 flex justify-center">
             <a
               href="https://px.a8.net/svt/ejp?a8mat=4BC4QP+5CX82+447K+BXIYP"
-              rel="nofollow"
+              rel="sponsored nofollow"
             >
+              {/* 広告配信元の計測仕様を維持するため、通常のimgを使用します。 */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="https://www29.a8.net/svt/bgt?aid=260906497009&wid=001&eno=01&mid=s00000019208002004000&mc=1"
                 width="468"
@@ -182,6 +152,7 @@ export default function MovingCost() {
                 className="h-auto max-w-full"
               />
             </a>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="https://www15.a8.net/0.gif?a8mat=4BC4QP+5CX82+447K+BXIYP"
               width="1"

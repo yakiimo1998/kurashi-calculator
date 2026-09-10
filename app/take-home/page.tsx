@@ -1,129 +1,21 @@
 "use client";
-
 import { useState } from "react";
-
+import MoneyInput from "../components/MoneyInput";
+import ToolPage from "../components/ToolPage";
+import { amount } from "../lib/calculations";
 export default function TakeHomePage() {
-  const [salary, setSalary] = useState("");
-  const [result, setResult] = useState<number | null>(null);
-
-  const calculate = () => {
-    const annualSalary = Number(salary);
-
-    if (!annualSalary || annualSalary <= 0) {
-      setResult(null);
-      return;
-    }
-
-    // 現在はMVP用の簡易計算です。
-    // 実際の税金・社会保険料を正確に計算するロジックは後で作ります。
-    const estimatedTakeHome = Math.round(annualSalary * 0.78);
-
-    setResult(estimatedTakeHome);
-  };
-
-  return (
-    <main className="min-h-screen bg-gray-50 px-6 py-12">
-      <div className="mx-auto max-w-2xl">
-        <a
-          href="/"
-          className="text-sm font-semibold text-blue-600 hover:underline"
-        >
-          ← トップページに戻る
-        </a>
-
-        <div className="mt-8 rounded-2xl bg-white p-8 shadow-sm ring-1 ring-gray-200">
-          <div className="text-4xl">💰</div>
-
-          <h1 className="mt-4 text-3xl font-bold text-gray-900">
-            手取り計算機
-          </h1>
-
-          <p className="mt-3 text-gray-600">
-            年収を入力すると、手取り額の目安を計算します。
-          </p>
-
-          <div className="mt-8">
-            <label
-              htmlFor="salary"
-              className="block text-sm font-semibold text-gray-900"
-            >
-              年収
-            </label>
-
-            <div className="mt-2 flex items-center gap-3">
-              <input
-                id="salary"
-                type="number"
-                value={salary}
-                onChange={(e) => setSalary(e.target.value)}
-                placeholder="500"
-                className="w-full rounded-xl border border-gray-300 px-4 py-3 text-lg outline-none focus:border-blue-500"
-              />
-
-              <span className="whitespace-nowrap text-gray-700">万円</span>
-            </div>
-          </div>
-
-          <button
-            onClick={calculate}
-            className="mt-6 w-full rounded-xl bg-blue-600 px-4 py-4 font-bold text-white hover:bg-blue-700"
-          >
-            手取りを計算する
-          </button>
-
-          {result !== null && (
-            <div className="mt-8 rounded-2xl bg-blue-50 p-6 text-center">
-              <p className="text-sm font-semibold text-gray-600">
-                推定手取り年収
-              </p>
-
-              <p className="mt-2 text-4xl font-bold text-gray-900">
-                {result.toLocaleString()}万円
-              </p>
-
-              <p className="mt-3 text-sm text-gray-600">
-                月あたり約 {(result / 12).toFixed(1)}万円
-              </p>
-
-              <p className="mt-4 text-xs text-gray-500">
-                ※現在はMVP用の簡易計算です。実際の手取り額は税金・社会保険料・年齢・扶養状況などによって異なります。
-              </p>
-            </div>
-          )}
-        </div>
-                <section className="mt-8 rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200">
-          <h2 className="text-xl font-bold text-gray-900">
-            一人暮らしのお金もチェック
-          </h2>
-
-          <p className="mt-3 text-sm leading-6 text-gray-600">
-            手取り額がわかったら、適正な家賃や生活費も確認してみましょう。
-          </p>
-
-          <div className="mt-5 flex flex-col gap-3">
-            <a
-              href="/rent"
-              className="rounded-xl bg-blue-600 px-5 py-3 text-center font-semibold text-white hover:bg-blue-700"
-            >
-              適正家賃を計算する
-            </a>
-
-            <a
-              href="/living-cost"
-              className="rounded-xl border border-gray-300 bg-white px-5 py-3 text-center font-semibold text-gray-700 hover:bg-gray-50"
-            >
-              一人暮らしの生活費を計算する
-            </a>
-
-            <a
-              href="/simulation"
-              className="rounded-xl border border-gray-300 bg-white px-5 py-3 text-center font-semibold text-gray-700 hover:bg-gray-50"
-            >
-              一人暮らしをシミュレーションする
-            </a>
-          </div>
-        </section>
-      </div>
-    </main>
-  );
+  const [salary, setSalary] = useState("500");
+  const [ratio, setRatio] = useState("78");
+  const annual = amount(salary, 0.0001, 100000);
+  const percentage = amount(ratio, 0, 100);
+  const result = annual !== null && percentage !== null ? annual * percentage / 100 : null;
+  return <ToolPage title="手取りの簡易試算" description="年収に仮の手取り率を掛ける計算です。所得税・住民税・社会保険料の個別計算は行いません。">
+    <div className="budget-workspace"><div className="budget-inputs"><div className="input-grid">
+      <MoneyInput label="額面の年収（賞与込み）" value={salary} onChange={setSalary} min={0.0001} max={100000} />
+      <MoneyInput label="仮の手取り率" value={ratio} onChange={setRatio} max={100} unit="％" hint="78％は従来の計算に使っていた仮定です。平均や税制上の率ではありません。" />
+    </div></div><section className="budget-result" aria-live="polite"><p className="result-label">設定した率での年間手取り</p>{result !== null ? <>
+      <p className="result-number">{result.toLocaleString("ja-JP", {maximumFractionDigits:2})}<span>万円</span></p><p className="result-equation">年収 {salary}万円 × {ratio}％</p><div className="result-divider" /><div className="result-detail"><span>12か月で均等に割ると</span><strong>{(result / 12).toLocaleString("ja-JP", {maximumFractionDigits:2})}万円／月</strong></div><p className="result-note">賞与を含む年額の均等割です。実際の月々の給与振込額とは異なります。</p>
+    </> : <p>入力内容を確認してください。</p>}</section></div>
+    <section className="explanation"><h2>給与明細がある場合は、実際の手取りを使う</h2><p>年収による税率の違い、扶養、年齢、居住地、控除、社会保険の加入状況などは反映していません。正確な手取り額の算定や、申告・納税には使えません。</p><p>家賃や生活費の予算づくりには、給与明細の差引支給額を確認し、一人暮らしシミュレーターへ入力してください。</p></section>
+  </ToolPage>;
 }
