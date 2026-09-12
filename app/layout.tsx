@@ -8,7 +8,9 @@ export const metadata: Metadata = {
   description: "毎月の手取りと生活費から、残るお金をその場で試算。家賃・電気代・車の費用など6つの無料計算機と、予算づくりの計算例を掲載しています。",
 };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <html lang="ja"><body>
+  return <html lang="ja"><head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7257171485978586" crossOrigin="anonymous" />
+  </head><body>
     <a className="skip-link" href="#main-content">本文へ移動</a>
     <header className="site-header"><div className="header-inner"><Link href="/" className="brand"><span className="brand-mark" aria-hidden="true">＝</span>暮らしの計算機</Link>
       <nav aria-label="メインメニュー"><Link href="/#tools">計算機一覧</Link><Link href="/fun">オモシロ計算機</Link><Link href="/living-cost-guide">予算ガイド</Link><Link href="/about">このサイトについて</Link></nav></div></header>
