@@ -126,3 +126,83 @@ input:focus-visible { outline:3px solid #bfdbfe; border-color:#2563eb; }
   .explanation,.related-tools { padding:22px; }
 }
 @media(prefers-reduced-motion:reduce) { * { scroll-behavior:auto!important; transition:none!important; } }
+
+.fun-home-link { display:flex; align-items:center; justify-content:space-between; gap:24px; padding:30px; border:1px solid #bcd4df; border-radius:16px; background:#edf8f7; }
+.fun-home-link h2 { font-size:1.5rem; font-weight:800; margin:6px 0; }
+.fun-home-link p { color:#405d65; }
+.tobacco-intro { margin:30px 0 24px; }
+.tobacco-intro h2 { font-size:clamp(1.8rem,4vw,2.7rem); line-height:1.4; font-weight:800; margin:14px 0; letter-spacing:-.03em; }
+.tobacco-intro p { color:#526279; }
+.tobacco-settings { background:white; border:1px solid #dce4ef; border-radius:16px; padding:28px; display:grid; grid-template-columns:minmax(0,2fr) minmax(0,1fr); gap:22px 26px; }
+.tobacco-brand { min-width:0; }
+.tobacco-brand>label { display:block; font-weight:700; margin-bottom:8px; }
+.tobacco-brand select { width:100%; min-width:0; border:1px solid #bccbdd; background:#fff; color:#183653; border-radius:8px; padding:13px 10px; font-size:1rem; text-overflow:ellipsis; }
+.tobacco-price { display:flex; flex-wrap:wrap; align-items:center; gap:8px 20px; grid-column:1/-1; border-radius:10px; background:#f0f5fb; padding:16px; }
+.tobacco-price strong { font-size:1.15rem; }
+.tobacco-price span,.tobacco-price a { font-size:.85rem; }
+.tobacco-price a { color:#174bcb; text-decoration:underline; }
+.tobacco-custom { grid-column:1/-1; }
+.tobacco-check { display:flex; gap:10px; align-items:center; cursor:pointer; font-size:.9375rem; }
+.tobacco-check input { width:19px; height:19px; flex-shrink:0; accent-color:#174bcb; }
+.tobacco-custom-fields { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:18px; }
+.tobacco-results { margin:32px 0; }
+.tobacco-results h2,.tobacco-alternatives h2 { font-size:1.4rem; font-weight:800; }
+.tobacco-periods { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }
+.tobacco-period { padding:24px 18px; border:1px solid #dce4ef; border-radius:13px; background:white; min-width:0; }
+.tobacco-period h3 { font-size:1.1rem; font-weight:700; display:flex; justify-content:space-between; gap:8px; align-items:center; }
+.tobacco-period small { font-size:.75rem; font-weight:400; }
+.tobacco-period p { margin:18px 0 12px; font-size:.875rem; }
+.tobacco-period strong { font-size:clamp(1.3rem,2.5vw,1.9rem); letter-spacing:-.04em; overflow-wrap:anywhere; font-variant-numeric:tabular-nums; }
+.tobacco-period>span { font-size:.8rem; color:#596b82; }
+.tobacco-year { background:#143b5c; color:white; border-color:#143b5c; }
+.tobacco-year>span { color:#d2e3ee; }
+.tobacco-alternatives { background:#edf8f7; border:1px solid #c8e1df; padding:28px; border-radius:16px; }
+.tobacco-alternatives>p { margin:8px 0; color:#405d65; }
+.tobacco-switch { display:flex; flex-wrap:wrap; gap:8px; margin:22px 0 12px; border:0; padding:0; }
+.tobacco-switch legend { font-size:.875rem; margin-bottom:10px; font-weight:700; }
+.tobacco-switch label { position:relative; cursor:pointer; }
+.tobacco-switch input { position:absolute; width:1px; height:1px; opacity:0; }
+.tobacco-switch span { display:block; padding:9px 20px; background:white; border:1px solid #a7c9c7; border-radius:8px; font-weight:700; }
+.tobacco-switch input:checked+span { background:#17665f; border-color:#17665f; color:white; }
+.tobacco-switch input:focus-visible+span { outline:3px solid #174bcb; outline-offset:3px; }
+.tobacco-available strong { color:#164f4a; font-size:1.3rem; }
+.tobacco-goals { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:20px; }
+.tobacco-goals article { background:white; border:1px solid #c8e1df; border-radius:12px; padding:20px; min-width:0; }
+.tobacco-goals h3 { font-weight:800; font-size:1.05rem; margin-bottom:14px; }
+.tobacco-goals .money-field label { font-size:.8rem; font-weight:400; }
+.tobacco-goal-count { font-size:2.1rem; font-weight:800; color:#17665f; margin-top:18px; overflow-wrap:anywhere; }
+.tobacco-goal-count small { font-size:.9rem; margin-left:6px; }
+.tobacco-alternatives .tobacco-example-note { font-size:.85rem; margin-top:20px; }
+@media(max-width:900px) { .tobacco-periods { grid-template-columns:repeat(2,minmax(0,1fr)); } .tobacco-goals { grid-template-columns:1fr; } }
+@media(max-width:600px) { .fun-home-link { padding:22px; align-items:flex-start; flex-direction:column; } .tobacco-settings { grid-template-columns:1fr; padding:20px; } .tobacco-custom-fields { grid-template-columns:1fr; } .tobacco-price { flex-direction:column; align-items:flex-start; } .tobacco-period { padding:18px 12px; } .tobacco-period h3 { flex-direction:column; align-items:flex-start; gap:3px; } .tobacco-period strong { font-size:1.4rem; } .tobacco-alternatives { padding:20px; } .tobacco-switch span { padding:9px 14px; } }
+
+/* Warm palette applies only while the fun page is displayed. */
+body:has(.fun-theme) { --background:#fff9ef; --foreground:#422c1b; }
+body:has(.fun-theme) .site-header,body:has(.fun-theme) .site-footer { border-color:#ecd9bd; }
+body:has(.fun-theme) .brand-mark { background:#b94d0b; }
+body:has(.fun-theme) .header-inner nav,body:has(.fun-theme) .footer-inner p,body:has(.fun-theme) .footer-bottom { color:#725a43; }
+body:has(.fun-theme) .footer-bottom { border-color:#ecd9bd; }
+body:has(.fun-theme) .header-inner nav a:hover,body:has(.fun-theme) .site-footer a:hover { color:#a44108; }
+body:has(.fun-theme) a:focus-visible,body:has(.fun-theme) button:focus-visible { outline-color:#b94d0b; }
+.fun-theme .section-kicker,.fun-theme .tool-tag,.fun-theme .back-link,.fun-theme .explanation a,.fun-theme .tobacco-price a { color:#a44108; }
+.fun-theme .tool-heading>p:last-child,.fun-theme .tobacco-intro p,.fun-theme .field-hint,.fun-theme .money-control span,.fun-theme .section-heading>span,.fun-theme .explanation p,.fun-theme .tobacco-period>span { color:#725a43; }
+.fun-theme .tobacco-settings,.fun-theme .tobacco-period,.fun-theme .explanation,.fun-theme .related-tools,.fun-theme .tobacco-goals article { border-color:#ecd9bd; }
+.fun-theme .tobacco-brand select,.fun-theme .money-control input { color:#422c1b; border-color:#cbb393; }
+.fun-theme input:focus-visible,.fun-theme select:focus-visible { outline:3px solid #d58016; outline-offset:2px; border-color:#a44108; }
+.fun-theme .tobacco-price { background:#fff0d2; }
+.fun-theme .tobacco-check input { accent-color:#b94d0b; }
+.fun-theme .tobacco-year { background:#b94d0b; border-color:#b94d0b; color:white; }
+.fun-theme .tobacco-year>span { color:#fff3df; }
+.fun-theme .tobacco-alternatives { background:#fff0c4; border-color:#e8c979; }
+.fun-theme .tobacco-alternatives>p { color:#70502b; }
+.fun-theme .tobacco-switch span { border-color:#cba457; }
+.fun-theme .tobacco-switch input:checked+span { background:#995b08; border-color:#995b08; color:white; }
+.fun-theme .tobacco-switch input:focus-visible+span { outline-color:#a44108; }
+.fun-theme .tobacco-available strong,.fun-theme .tobacco-goal-count { color:#994207; }
+.fun-theme .related-tools a { color:#a44108; background:#fff0d2; }
+
+.fun-theme .tobacco-caution { border:1px solid #d8b172; border-left:5px solid #b94d0b; background:#fffdf7; }
+.fun-theme .tobacco-caution h2 { color:#87400e; }
+.fun-theme .tobacco-caution ul { list-style:disc; padding-left:1.4em; margin-top:16px; }
+.fun-theme .tobacco-caution li { margin-top:10px; color:#422c1b; }
+.fun-theme .tobacco-caution .tobacco-caution-source { font-size:.875rem; margin-top:20px; }
