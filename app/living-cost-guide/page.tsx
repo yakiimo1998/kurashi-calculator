@@ -1,12 +1,7 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "../lib/seo";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/living-cost-guide" },
-  title: "一人暮らしの生活費はいくら？月額の目安と内訳を解説｜暮らしの計算機",
-  description:
-    "一人暮らしにかかる生活費の目安を家賃・食費・水道光熱費・通信費などの項目別に解説。自分の条件に合わせて毎月の生活費も計算できます。",
-};
+export const metadata = pageMetadata("/living-cost-guide", "一人暮らしの生活費｜予算の内訳と計算例", "家賃・食費・水道光熱費・通信費などに分けて、一人暮らしの予算を作る方法を紹介。統計上の平均ではなく、条件を設定した計算例と無料計算機で確認できます。");
 
 export default function LivingCostGuidePage() {
   return (

@@ -1,12 +1,7 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "../lib/seo";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/electricity-guide" },
-  title: "電気代はいくら？一人暮らしの目安と計算方法を解説｜暮らしの計算機",
-  description:
-    "一人暮らしの電気代はいくら？電気代の計算方法、家電ごとの消費電力、電気代を節約する方法をわかりやすく解説します。",
-};
+export const metadata = pageMetadata("/electricity-guide", "電気代はいくら？一人暮らしの目安と計算方法を解説｜暮らしの計算機", "一人暮らしの電気代はいくら？電気代の計算方法、家電ごとの消費電力、電気代を節約する方法をわかりやすく解説します。");
 
 export default function ElectricityGuide() {
   return (

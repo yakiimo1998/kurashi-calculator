@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "./lib/seo";
 import Link from "next/link";
 import BudgetCalculator from "./components/BudgetCalculator";
 
-export const metadata: Metadata = { alternates: { canonical: "/" } };
+export const metadata = pageMetadata("/", "暮らしの計算機｜生活費・家賃・電気代・タバコ代を無料計算", "手取りと生活費から毎月残るお金を試算。家賃・電気代・車の費用・タバコ代などを自分の条件で計算できます。無料・登録不要。計算式と前提、家計の予算例も掲載。");
 
 const tools = [
   { n: "01", href: "/simulation", title: "一人暮らしの収支", text: "家賃・食費などを分けて、毎月残るお金を確認。", tag: "家計全体" },
@@ -20,8 +20,9 @@ const guides = [
 ];
 export default function Home() {
   return <main id="main-content" className="home-page">
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "WebSite", name: "暮らしの計算機", url: "https://kurashi-calculator.pages.dev/", inLanguage: "ja" }).replace(/</g, "\\u003c") }} />
     <section className="home-intro"><div><p className="section-kicker">一人暮らしのお金を、見える形に。</p>
-      <h1>この暮らし、<br className="mobile-break" />毎月いくら残る？</h1>
+      <h1>一人暮らしの生活費、<br className="mobile-break" />毎月いくら残る？</h1>
       <p>手取りと生活費を入れて、あなたの予算を確かめましょう。</p></div><span className="free-label">無料・登録不要</span></section>
     <BudgetCalculator compact />
     <p className="under-calculator">計算結果は入力条件に基づく試算です。金額を変更すると、その場で更新されます。</p>

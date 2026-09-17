@@ -1,12 +1,7 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "../lib/seo";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/moving-cost" },
-  title: "引っ越し費用はいくら？一人暮らしの初期費用と見積もり項目｜暮らしの計算機",
-  description:
-    "一人暮らしの引っ越し費用はいくら？引っ越し料金や賃貸の初期費用の確認項目、見積もりの比較方法をわかりやすく解説します。",
-};
+export const metadata = pageMetadata("/moving-cost", "引っ越し費用はいくら？一人暮らしの初期費用と見積もり項目｜暮らしの計算機", "一人暮らしの引っ越し費用はいくら？引っ越し料金や賃貸の初期費用の確認項目、見積もりの比較方法をわかりやすく解説します。");
 
 export default function MovingCost() {
   return (

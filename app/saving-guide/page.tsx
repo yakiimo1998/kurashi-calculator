@@ -1,12 +1,7 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "../lib/seo";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/saving-guide" },
-  title: "一人暮らしの貯金額はいくら？毎月の予算と積立の計算例｜暮らしの計算機",
-  description:
-    "一人暮らしでは毎月いくら貯金すればいい？手取り別の貯金額の目安や、生活費とのバランス、無理なく貯金する方法を解説します。",
-};
+export const metadata = pageMetadata("/saving-guide", "一人暮らしの貯金計画｜生活費と積立額の計算例", "手取りから生活費を引いて、貯金に回す予算を考える方法を解説。月々の積立額と年間額の計算例、臨時支出に備えるポイントを紹介します。");
 
 export default function SavingGuidePage() {
   return (

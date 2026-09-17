@@ -1,12 +1,7 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "../lib/seo";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/take-home-35" },
-  title: "手取り35万円の一人暮らし｜家賃・生活費・貯金額の目安",
-  description:
-    "手取り35万円で一人暮らしをする場合の家賃・生活費・毎月残るお金・年間貯金額の目安を紹介します。",
-};
+export const metadata = pageMetadata("/take-home-35", "手取り35万円の一人暮らし｜家賃・生活費の予算例", "手取り35万円の家賃割合と生活費の組み合わせを計算例で紹介。毎月残るお金を確認し、無料シミュレーターで自分の条件に変更できます。平均額や貯金額の保証ではありません。");
 
 export default function TakeHome35Page() {
   return (

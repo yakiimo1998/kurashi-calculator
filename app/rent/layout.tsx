@@ -1,11 +1,6 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "../lib/seo";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/rent" },
-  title: "適正家賃計算機｜手取りから家賃の目安を計算",
-  description:
-    "月の手取り額を入力するだけで、設定した割合での適正家賃の目安をかんたんに計算できます。",
-};
+export const metadata = pageMetadata("/rent", "家賃計算機｜手取りと家賃割合から予算を試算", "毎月の手取りと家賃に充てる割合から、家賃の予算を無料計算。生活費や貯金の希望額に合わせて比較できます。統計上の適正額を判定するものではありません。");
 
 export default function RentLayout({
   children,

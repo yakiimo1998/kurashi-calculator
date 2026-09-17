@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "../lib/seo";
 import Link from "next/link";
 
-export const metadata: Metadata = { title: "お問い合わせ｜暮らしの計算機", description: "暮らしの計算機へのご質問・不具合報告はXの @kura_culator へ。", alternates: { canonical: "/contact" } };
+export const metadata = pageMetadata("/contact", "お問い合わせ｜暮らしの計算機", "暮らしの計算機へのご質問・不具合報告はXの @kura_culator へ。");
 export default function ContactPage() {
   return (
     <main id="main-content" className="min-h-screen bg-gray-50 px-4 py-10">

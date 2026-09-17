@@ -1,15 +1,11 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "../lib/seo";
 import ToolPage from "../components/ToolPage";
 import TobaccoCalculator from "../components/TobaccoCalculator";
 import { sources } from "../lib/tobacco";
 
-export const metadata: Metadata = {
-  title: "オモシロ計算機｜タバコ代と吸わなかった場合の使い道 | 暮らしの計算機",
-  description: "銘柄と1日の本数から、1週間・1か月・1年・3年のタバコ代を無料計算。吸わなかった場合の外食・旅行などの予算と比較できます。",
-  alternates: { canonical: "/fun" },
-};
+export const metadata = pageMetadata("/fun", "タバコ代計算機｜1週間・1か月・1年・3年の費用比較｜暮らしの計算機", "銘柄と1日の本数からタバコ代を無料計算。1週間・1か月・1年・3年の支出を、吸わなかった場合の外食・本・旅行の予算例と比較。価格の手入力にも対応しています。");
 export default function FunPage() {
-  return <div className="fun-theme"><ToolPage title="オモシロ計算機" description="いつもの出費を、ちょっと違う見方で。">
+  return <div className="fun-theme"><ToolPage title="オモシロ計算機" description="タバコ代計算機：1週間・1か月・1年・3年の支出と、別の使い道を比較。">
     <TobaccoCalculator />
     <section className="explanation"><h2>計算の前提と価格の出典</h2>
       <p>タバコ代 ＝ 1箱の価格 ÷ 1箱の本数 × 1日の平均本数 × 日数。1週間は7日、1か月は30日、1年は365日、3年は1,095日です。箱の端数を切り上げず、吸う本数に相当する費用を計算し、表示時に1円単位で四捨五入します。</p>

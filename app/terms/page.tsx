@@ -1,11 +1,6 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "../lib/seo";
 
-export const metadata: Metadata = {
-  alternates: { canonical: "/terms" },
-  title: "利用規約・免責事項｜暮らしの計算機",
-  description:
-    "暮らしの計算機の利用規約・免責事項です。当サイトのサービス利用に関する注意事項を掲載しています。",
-};
+export const metadata = pageMetadata("/terms", "利用規約・免責事項｜暮らしの計算機", "暮らしの計算機の利用規約・免責事項です。当サイトのサービス利用に関する注意事項を掲載しています。");
 
 export default function TermsPage() {
   return (
