@@ -1,6 +1,6 @@
 import { pageMetadata } from "../lib/seo";
 
-export const metadata = pageMetadata("/take-home", "手取りの簡易試算｜年収と仮の手取り率で計算", "年収に指定した手取り率を掛ける簡易試算です。税金・社会保険料は個別計算しません。");
+export const metadata = pageMetadata("/take-home", "手取り確認計算機｜給与明細・年収から家計を整理", "給与明細の支給合計と控除から差引支給額を確認。通勤費等を除く予算や年収からの簡易試算も計算できます。税額・保険料の個別計算は行いません。");
 
 export default function TakeHomeLayout({
   children,

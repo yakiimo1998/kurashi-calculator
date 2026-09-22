@@ -1,6 +1,6 @@
 import { pageMetadata } from "../lib/seo";
 
-export const metadata = pageMetadata("/simulation", "一人暮らしシミュレーター｜生活費と毎月残るお金を計算", "毎月の手取りと家賃・食費などの生活費から、月間・年間の収支を無料試算。固定費を変えて比較できます。年間額は同じ条件が12か月続く仮定です。");
+export const metadata = pageMetadata("/simulation", "一人暮らしシミュレーター｜年払い・貯金目標と家計比較", "手取り・7つの生活費・年払いの備え・貯金目標から毎月の収支を無料計算。条件を記録して変更前後を比較でき、残額と不足額を区別して確認できます。");
 
 export default function SimulationLayout({
   children,

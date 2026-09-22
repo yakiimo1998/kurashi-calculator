@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://kurashi-calculator.pages.dev"),
   title: "暮らしの計算機｜一人暮らしの生活費・家賃・収支を無料計算",
-  description: "毎月の手取りと生活費から、残るお金をその場で試算。家賃・電気代・車の費用など6つの無料計算機と、予算づくりの計算例を掲載しています。",
+  description: "毎月の手取りと生活費から、残るお金をその場で試算。家賃・電気代・車の費用など8つの無料計算機と、予算づくりの計算例を掲載しています。",
 };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return <html lang="ja"><head>

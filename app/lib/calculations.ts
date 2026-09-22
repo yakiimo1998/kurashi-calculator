@@ -19,3 +19,21 @@ export function electricityCost(power: number, hours: number, days: number, rate
   const kwh = power / 1000 * hours * days;
   return { kwh, monthly: kwh * rate, annual: kwh * rate * 12 };
 }
+
+// Amounts use 万円. Retain fractional monthly reserves so twelve months match the annual budget.
+export function budgetPlan(income: number, expenses: number[], annualExpenses: number, savings: number) {
+  const base = budget(income, expenses);
+  const reserve = Math.round(annualExpenses * 10000) / 120000;
+  const target = Math.round(savings * 10000) / 10000;
+  return { ...base, reserve, monthlyCost: base.total + reserve,
+    available: base.remaining - reserve, flexible: base.remaining - reserve - target,
+    annualAvailable: base.annual - reserve * 12, savings: target };
+}
+
+export function savingsPlan(goal: number, current: number, monthly: number, months: number) {
+  const remaining = Math.max(0, Math.round(goal * 10000) - Math.round(current * 10000));
+  const contribution = Math.round(monthly * 10000);
+  return { remaining: remaining / 10000, requiredMonthly: Math.ceil(remaining / months) / 10000,
+    monthsNeeded: remaining === 0 ? 0 : contribution > 0 ? Math.ceil(remaining / contribution) : null,
+    projected: (Math.round(current * 10000) + contribution * months) / 10000 };
+}

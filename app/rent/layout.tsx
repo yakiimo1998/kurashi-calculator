@@ -1,6 +1,6 @@
 import { pageMetadata } from "../lib/seo";
 
-export const metadata = pageMetadata("/rent", "家賃計算機｜手取りと家賃割合から予算を試算", "毎月の手取りと家賃に充てる割合から、家賃の予算を無料計算。生活費や貯金の希望額に合わせて比較できます。統計上の適正額を判定するものではありません。");
+export const metadata = pageMetadata("/rent", "家賃計算機｜生活費と貯金目標から家賃予算を逆算", "手取り・生活費・年払い・貯金目標から住居費の予算を無料計算。割合での試算と候補の家賃・管理費を比較し、毎月の残額や不足を確認できます。");
 
 export default function RentLayout({
   children,
